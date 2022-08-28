@@ -15,8 +15,8 @@
         ,"post1": {
             "title": "Hacks-Key_Learning-Notebook",
             "content": "print(&quot;Week 0: Set-up a user in PowerShell by using $New-LocalUser -Name user_name.&quot;) print(&quot;Week 1: Add an image to index.html in github by using this line of code:&quot;) print(&quot;img src=&quot;&quot;/Q-tip/images/Screenshot of cat typing 2022-08-26.png&quot;&quot; height=&quot;&quot;auto&quot;&quot; width=&quot;&quot;auto&quot;&quot;&gt;&quot;) . Week 0: Set-up a user in PowerShell by using $New-LocalUser -Name user_name. Week 1: Add an image to index.html in github by using this line of code: img src=/Q-tip/images/Screenshot of cat typing 2022-08-26.png height=auto width=auto&gt; .",
-            "url": "https://q-tipwithaface.github.io/Q-tip/fastpages/jupyter/2022/08/27/Hacks-Key_Learning-Notebook.html",
-            "relUrl": "/fastpages/jupyter/2022/08/27/Hacks-Key_Learning-Notebook.html",
+            "url": "https://q-tipwithaface.github.io/Q-tip/fastpages/jupyter/python/2022/08/27/Hacks-Key_Learning-Notebook.html",
+            "relUrl": "/fastpages/jupyter/python/2022/08/27/Hacks-Key_Learning-Notebook.html",
             "date": " • Aug 27, 2022"
         }
         
