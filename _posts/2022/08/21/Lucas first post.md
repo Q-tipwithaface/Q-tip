@@ -1,1 +1,0 @@
-This is Lucas's first post on GitHub.
