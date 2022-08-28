@@ -9,4 +9,4 @@ Weekly Progess
 ---
 Week 1: Doing a Bash test, Update Fastpage
 
-Week 2: 
+Week 2: In Progess
