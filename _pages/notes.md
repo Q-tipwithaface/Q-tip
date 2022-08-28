@@ -1,6 +1,8 @@
-layout	title	permalink
-page
-Notes
-/notes/
+---
+layout: default
+permalink: /notes/
+title: Notes
+search_exclude: true
+---
 
-Week 1 Doing a bash test
+"Week 1: Doing a Bash test, Update Fastpage"
