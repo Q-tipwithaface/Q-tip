@@ -25,9 +25,15 @@ x= -e/d          x= -g/f
 ---
 
 Ax^2+bx+c=y
+
 (Ax^2+bx+  ) = y -c
+
 (Ax^2+bx+d)-d = y -c
+
 Guess and Check
+
 (Ex+f)(Ex+f)-d=y-c
+
 y=(Ex+f)^2-d+c
+
 y=(Ex+f)^2+G
