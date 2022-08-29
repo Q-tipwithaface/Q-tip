@@ -4,8 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+My name is Lucas and I am a sophomore at [Del Norte High School](https://www.powayusd.com/en-US/Schools/HS/DNHS/Home).
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+I am taking an AP Computer Principal class to get a better understanding of how a computer works and what it can do.
