@@ -3,9 +3,9 @@
 	"file": "style.css",
 	"sources": [
 		"style.scss",
-		"../../tmp/jekyll-remote-theme-20220831-1-1fgk9fl/_sass/jekyll-theme-time-machine.scss",
-		"../../tmp/jekyll-remote-theme-20220831-1-1fgk9fl/_sass/normalize.scss",
-		"../../tmp/jekyll-remote-theme-20220831-1-1fgk9fl/_sass/rouge-base16-dark.scss"
+		"../../tmp/jekyll-remote-theme-20220831-1-1wj81p6/_sass/jekyll-theme-time-machine.scss",
+		"../../tmp/jekyll-remote-theme-20220831-1-1wj81p6/_sass/normalize.scss",
+		"../../tmp/jekyll-remote-theme-20220831-1-1wj81p6/_sass/rouge-base16-dark.scss"
 	],
 	"sourcesContent": [
 		"@import \"jekyll-theme-time-machine\";\n",
