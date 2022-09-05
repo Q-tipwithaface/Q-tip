@@ -2,7 +2,7 @@
 toc: true
 layout: page
 title: Schedule
-categories: [Week 2]
+categories: [markdown]
 ---
 
 ## Work Schedule
