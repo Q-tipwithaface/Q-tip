@@ -46,17 +46,6 @@
   
     
         ,"post4": {
-            "title": "Title",
-            "content": "def Python_Quiz(prompt): global word print (&quot;Question: &quot; + prompt) word = input() return word questions_number = 4 correct_answer = 0 print(&quot;Hello, you will now be answering &quot; + str(questions_number) + &quot; questions&quot;) My_Quiz = [{ &quot;How many states are in the United States of America?&quot;: &quot;50&quot;, &quot;What is the absolute value of 9?&quot;: &quot;9&quot;, &quot;What is the first colour in a rainbow?&quot;: &quot;red&quot;, &quot;What is the 21st letter of the alphabet?&quot;: &quot;u&quot;, }] # My_Quiz.append({ # &quot;How many states are in the United States of America?&quot;: &quot;50&quot;, # &quot;What is the absolute value of 9?&quot;: &quot;9&quot;, # &quot;What is the first colour in a rainbow?&quot;: &quot;red&quot;, # &quot;What is the 21st letter of the alphabet?&quot;: &quot;u&quot;, # }) for dict in My_Quiz: for questions, answers in dict.items(): Python_Quiz(questions) if word == answers: print(&quot;That is correct&quot;) correct_answer += 1 else: print(&quot;That is incorrect&quot;) print(&quot;You answered &quot; + str(correct_answer) + &quot; out of &quot; + str(questions_number)+ &quot; questions correctly&quot;) .",
-            "url": "https://q-tipwithaface.github.io/Q-tip/2022/09/03/Dictionaries_List_Quiz.html",
-            "relUrl": "/2022/09/03/Dictionaries_List_Quiz.html",
-            "date": " • Sep 3, 2022"
-        }
-        
-    
-  
-    
-        ,"post5": {
             "title": "Screenshot of temporarily remote theme",
             "content": ".",
             "url": "https://q-tipwithaface.github.io/Q-tip/2022/09/02/Screenshot-of-temporarily-remote-theme.html",
@@ -67,7 +56,7 @@
     
   
     
-        ,"post6": {
+        ,"post5": {
             "title": "InfoDb with Loops",
             "content": "InfoDb = [] # InfoDB is a data structure with expected Keys and Values # Append to List a Dictionary of key/values related to a person and cars InfoDb.append({ &quot;FirstName&quot;: &quot;John&quot;, &quot;LastName&quot;: &quot;Mortensen&quot;, &quot;DOB&quot;: &quot;October 21&quot;, &quot;Residence&quot;: &quot;San Diego&quot;, &quot;Email&quot;: &quot;jmortensen@powayusd.com&quot;, &quot;Owns_Cars&quot;: [&quot;2015-Fusion&quot;, &quot;2011-Ranger&quot;, &quot;2003-Excursion&quot;, &quot;1997-F350&quot;, &quot;1969-Cadillac&quot;] }) # Append to List a 2nd Dictionary of key/values InfoDb.append({ &quot;FirstName&quot;: &quot;Sunny&quot;, &quot;LastName&quot;: &quot;Naidu&quot;, &quot;DOB&quot;: &quot;August 2&quot;, &quot;Residence&quot;: &quot;Temecula&quot;, &quot;Email&quot;: &quot;snaidu@powayusd.com&quot;, &quot;Owns_Cars&quot;: [&quot;4Runner&quot;] }) # Personal Info InfoDb.append({ &quot;FirstName&quot;: &quot;Lucas&quot;, &quot;LastName&quot;: &quot;Moore&quot;, &quot;DOB&quot;: &quot;Decemeber 16&quot;, &quot;Residence&quot;: &quot;4S Ranch&quot;, &quot;Email&quot;: &quot;lem16silver@gmail.com&quot;, &quot;Owns_Cars&quot;: [&quot;None&quot;] }) InfoDb.append({ &quot;FirstName&quot;: &quot;Aniket&quot;, &quot;LastName&quot;: &quot;Chakrado&quot;, &quot;DOB&quot;: &quot;Febuary 20&quot;, &quot;Residence&quot;: &quot;4S Ranch&quot;, &quot;Email&quot;: &quot;aniket@charadeo.net&quot;, &quot;Owns_Cars&quot;: [&quot;Red-Buggati&quot;] }) # Print the data structure #print(InfoDb) def print_data(d_rec): print(d_rec[&quot;FirstName&quot;], d_rec[&quot;LastName&quot;]) # using comma puts space between values print(&quot; t&quot;, &quot;Residence:&quot;, d_rec[&quot;Residence&quot;]) # t is a tab indent print(&quot; t&quot;, &quot;Birth Day:&quot;, d_rec[&quot;DOB&quot;]) print(&quot; t&quot;, &quot;Cars: &quot;, end=&quot;&quot;) # end=&quot;&quot; make sure no return occurs print(&quot;, &quot;.join(d_rec[&quot;Owns_Cars&quot;])) # join allows printing a string list with separator print() # for loop algorithm iterates on length of InfoDb def for_loop(): print(&quot;For loop output n&quot;) for record in InfoDb: print_data(record) for_loop() . For loop output John Mortensen Residence: San Diego Birth Day: October 21 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac Sunny Naidu Residence: Temecula Birth Day: August 2 Cars: 4Runner Lucas Moore Residence: 4S Ranch Birth Day: Decemeber 16 Cars: None Aniket Chakrado Residence: 4S Ranch Birth Day: Febuary 20 Cars: Red-Buggati .",
             "url": "https://q-tipwithaface.github.io/Q-tip/2022/08/30/Lucas_Python_list_title.html",
@@ -78,7 +67,7 @@
     
   
     
-        ,"post7": {
+        ,"post6": {
             "title": "Cat pic",
             "content": ".",
             "url": "https://q-tipwithaface.github.io/Q-tip/markdown/2022/08/29/postwithimage.html",
@@ -89,7 +78,7 @@
     
   
     
-        ,"post8": {
+        ,"post7": {
             "title": "Lucas's First Python Quiz!",
             "content": "points= 0 answer = input(&quot;How many minutes are in 3 hours?&quot;) if answer == &quot;180&quot;: print (&quot;That is correct&quot;) points += 1 else: print (&quot;That is incorrect&quot;) points -= 0 answer = input(&quot;True or False? 4^4=16&quot;) if answer == &quot;false&quot;: print (&quot;That is correct&quot;) points += 1 else: print (&quot;That is incorrect&quot;) points -= 0 answer = input(&quot;How many lives do cats have?&quot;) if answer == &quot;9&quot;: print (&quot;That is correct&quot;) points += 1 else: print (&quot;That is incorrect&quot;) points -= 0 . That is correct That is correct That is correct .",
             "url": "https://q-tipwithaface.github.io/Q-tip/2022/08/28/python_quiz.html",
@@ -100,7 +89,7 @@
     
   
     
-        ,"post9": {
+        ,"post8": {
             "title": "Math_3a_formulas_to_remember",
             "content": "IIIA Math Formals . These Math Formals will be used as a reminder on how to solve using them. . Formals from Unit 1: . Ax^2+bx+c . Guess and Check . (dx+e)(fx+g) . . Ax^2+bx+c=0 . Guess and Check . (dx+e)(fx+g)=0 . (dx+e)=0 (fx+g)=0 dx= -e fx = -g x= -e/d x= -g/f . . Ax^2+bx+c=y . (Ax^2+bx+ ) = y -c . (Ax^2+bx+d)-d = y -c . Guess and Check . (Ex+f)(Ex+f)-d=y-c . y=(Ex+f)^2-d+c . y=(Ex+f)^2+G .",
             "url": "https://q-tipwithaface.github.io/Q-tip/2022/08/28/Math_3A_formulas_to_remember.html",
@@ -111,7 +100,7 @@
     
   
     
-        ,"post10": {
+        ,"post9": {
             "title": "3d_animation_boucing_ball_post",
             "content": "3D animation boucing ball post . Below is an image of a boucing ball render I made. — .",
             "url": "https://q-tipwithaface.github.io/Q-tip/2022/08/28/3D_animation_boucing_ball_post.html",
@@ -122,7 +111,7 @@
     
   
     
-        ,"post11": {
+        ,"post10": {
             "title": "Lucas First Post",
             "content": "First post. . This is Lucas’s first post on Fastpages. . This post is used to get a better understanding of fastpages and how to use it. .",
             "url": "https://q-tipwithaface.github.io/Q-tip/2022/08/21/Lucas-First-Post.html",
@@ -133,7 +122,7 @@
     
   
     
-        ,"post12": {
+        ,"post11": {
             "title": "Lucas's First Notebook",
             "content": "print(&quot;Hello&quot;) .",
             "url": "https://q-tipwithaface.github.io/Q-tip/fastpages/jupyter/python/2022/08/21/Lucas-First-Notebook-v2.html",
@@ -144,7 +133,7 @@
     
   
     
-        ,"post13": {
+        ,"post12": {
             "title": "Fastpages Notebook Blog Post",
             "content": "About . This notebook is a demonstration of some of capabilities of fastpages with notebooks. . With fastpages you can save your jupyter notebooks into the _notebooks folder at the root of your repository, and they will be automatically be converted to Jekyll compliant blog posts! . Front Matter . The first cell in your Jupyter Notebook or markdown blog post contains front matter. Front matter is metadata that can turn on/off options in your Notebook. It is formatted like this: . # &quot;My Title&quot; &gt; &quot;Awesome summary&quot; - toc:true- branch: master - badges: true - comments: true - author: Hamel Husain &amp; Jeremy Howard - categories: [fastpages, jupyter] . Setting toc: true will automatically generate a table of contents | Setting badges: true will automatically include GitHub and Google Colab links to your notebook. | Setting comments: true will enable commenting on your blog post, powered by utterances. | . The title and description need to be enclosed in double quotes only if they include special characters such as a colon. More details and options for front matter can be viewed on the front matter section of the README. . Markdown Shortcuts . A #hide comment at the top of any code cell will hide both the input and output of that cell in your blog post. . A #hide_input comment at the top of any code cell will only hide the input of that cell. . The comment #hide_input was used to hide the code that produced this. . put a #collapse-hide flag at the top of any cell if you want to hide that cell by default, but give the reader the option to show it: . import pandas as pd import altair as alt . . put a #collapse-show flag at the top of any cell if you want to show that cell by default, but give the reader the option to hide it: . cars = &#39;https://vega.github.io/vega-datasets/data/cars.json&#39; movies = &#39;https://vega.github.io/vega-datasets/data/movies.json&#39; sp500 = &#39;https://vega.github.io/vega-datasets/data/sp500.csv&#39; stocks = &#39;https://vega.github.io/vega-datasets/data/stocks.csv&#39; flights = &#39;https://vega.github.io/vega-datasets/data/flights-5k.json&#39; . . place a #collapse-output flag at the top of any cell if you want to put the output under a collapsable element that is closed by default, but give the reader the option to open it: . print(&#39;The comment #collapse-output was used to collapse the output of this cell by default but you can expand it.&#39;) . The comment #collapse-output was used to collapse the output of this cell by default but you can expand it. . . Interactive Charts With Altair . Charts made with Altair remain interactive. Example charts taken from this repo, specifically this notebook. . Example 1: DropDown . # use specific hard-wired values as the initial selected values selection = alt.selection_single( name=&#39;Select&#39;, fields=[&#39;Major_Genre&#39;, &#39;MPAA_Rating&#39;], init={&#39;Major_Genre&#39;: &#39;Drama&#39;, &#39;MPAA_Rating&#39;: &#39;R&#39;}, bind={&#39;Major_Genre&#39;: alt.binding_select(options=genres), &#39;MPAA_Rating&#39;: alt.binding_radio(options=mpaa)} ) # scatter plot, modify opacity based on selection alt.Chart(df).mark_circle().add_selection( selection ).encode( x=&#39;Rotten_Tomatoes_Rating:Q&#39;, y=&#39;IMDB_Rating:Q&#39;, tooltip=&#39;Title:N&#39;, opacity=alt.condition(selection, alt.value(0.75), alt.value(0.05)) ) . Example 2: Tooltips . alt.Chart(df).mark_circle().add_selection( alt.selection_interval(bind=&#39;scales&#39;, encodings=[&#39;x&#39;]) ).encode( alt.X(&#39;Rotten_Tomatoes_Rating&#39;, type=&#39;quantitative&#39;), alt.Y(&#39;IMDB_Rating&#39;, type=&#39;quantitative&#39;, axis=alt.Axis(minExtent=30)), # y=alt.Y(&#39;IMDB_Rating:Q&#39;, ), # use min extent to stabilize axis title placement tooltip=[&#39;Title:N&#39;, &#39;Release_Date:N&#39;, &#39;IMDB_Rating:Q&#39;, &#39;Rotten_Tomatoes_Rating:Q&#39;] ).properties( width=500, height=400 ) . Example 3: More Tooltips . label = alt.selection_single( encodings=[&#39;x&#39;], # limit selection to x-axis value on=&#39;mouseover&#39;, # select on mouseover events nearest=True, # select data point nearest the cursor empty=&#39;none&#39; # empty selection includes no data points ) # define our base line chart of stock prices base = alt.Chart().mark_line().encode( alt.X(&#39;date:T&#39;), alt.Y(&#39;price:Q&#39;, scale=alt.Scale(type=&#39;log&#39;)), alt.Color(&#39;symbol:N&#39;) ) alt.layer( base, # base line chart # add a rule mark to serve as a guide line alt.Chart().mark_rule(color=&#39;#aaa&#39;).encode( x=&#39;date:T&#39; ).transform_filter(label), # add circle marks for selected time points, hide unselected points base.mark_circle().encode( opacity=alt.condition(label, alt.value(1), alt.value(0)) ).add_selection(label), # add white stroked text to provide a legible background for labels base.mark_text(align=&#39;left&#39;, dx=5, dy=-5, stroke=&#39;white&#39;, strokeWidth=2).encode( text=&#39;price:Q&#39; ).transform_filter(label), # add text labels for stock prices base.mark_text(align=&#39;left&#39;, dx=5, dy=-5).encode( text=&#39;price:Q&#39; ).transform_filter(label), data=stocks ).properties( width=500, height=400 ) . Data Tables . You can display tables per the usual way in your blog: . df[[&#39;Title&#39;, &#39;Worldwide_Gross&#39;, &#39;Production_Budget&#39;, &#39;Distributor&#39;, &#39;MPAA_Rating&#39;, &#39;IMDB_Rating&#39;, &#39;Rotten_Tomatoes_Rating&#39;]].head() . Title Worldwide_Gross Production_Budget Distributor MPAA_Rating IMDB_Rating Rotten_Tomatoes_Rating . 0 The Land Girls | 146083.0 | 8000000.0 | Gramercy | R | 6.1 | NaN | . 1 First Love, Last Rites | 10876.0 | 300000.0 | Strand | R | 6.9 | NaN | . 2 I Married a Strange Person | 203134.0 | 250000.0 | Lionsgate | None | 6.8 | NaN | . 3 Let&#39;s Talk About Sex | 373615.0 | 300000.0 | Fine Line | None | NaN | 13.0 | . 4 Slam | 1087521.0 | 1000000.0 | Trimark | R | 3.4 | 62.0 | . Images . Local Images . You can reference local images and they will be copied and rendered on your blog automatically. You can include these with the following markdown syntax: . ![](my_icons/fastai_logo.png) . . Remote Images . Remote images can be included with the following markdown syntax: . ![](https://image.flaticon.com/icons/svg/36/36686.svg) . . Animated Gifs . Animated Gifs work, too! . ![](https://upload.wikimedia.org/wikipedia/commons/7/71/ChessPawnSpecialMoves.gif) . . Captions . You can include captions with markdown images like this: . ![](https://www.fast.ai/images/fastai_paper/show_batch.png &quot;Credit: https://www.fast.ai/2020/02/13/fastai-A-Layered-API-for-Deep-Learning/&quot;) . . Other Elements . GitHub Flavored Emojis . Typing I give this post two :+1:! will render this: . I give this post two :+1:! . Tweetcards . Typing &gt; twitter: https://twitter.com/jakevdp/status/1204765621767901185?s=20 will render this: Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 . Youtube Videos . Typing &gt; youtube: https://youtu.be/XfoYk_Z5AkI will render this: . Boxes / Callouts . Typing &gt; Warning: There will be no second warning! will render this: . Warning: There will be no second warning! . Typing &gt; Important: Pay attention! It&#39;s important. will render this: . Important: Pay attention! It&#8217;s important. . Typing &gt; Tip: This is my tip. will render this: . Tip: This is my tip. . Typing &gt; Note: Take note of this. will render this: . Note: Take note of this. . Typing &gt; Note: A doc link to [an example website: fast.ai](https://www.fast.ai/) should also work fine. will render in the docs: . Note: A doc link to an example website: fast.ai should also work fine. . Footnotes . You can have footnotes in notebooks, however the syntax is different compared to markdown documents. This guide provides more detail about this syntax, which looks like this: . For example, here is a footnote {% fn 1 %}. And another {% fn 2 %} {{ &#39;This is the footnote.&#39; | fndetail: 1 }} {{ &#39;This is the other footnote. You can even have a [link](www.github.com)!&#39; | fndetail: 2 }} . For example, here is a footnote 1. . And another 2 . 1. This is the footnote.↩ . 2. This is the other footnote. You can even have a link!↩ .",
             "url": "https://q-tipwithaface.github.io/Q-tip/jupyter/2020/02/20/test.html",
@@ -155,7 +144,7 @@
     
   
     
-        ,"post14": {
+        ,"post13": {
             "title": "An Example Markdown Post",
             "content": "Example Markdown Post . Basic setup . Jekyll requires blog post files to be named according to the following format: . YEAR-MONTH-DAY-filename.md . Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and filename is whatever file name you choose, to remind yourself what this post is about. .md is the file extension for markdown files. . The first line of the file should start with a single hash character, then a space, then your title. This is how you create a “level 1 heading” in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line ## File names above. . Basic formatting . You can use italics, bold, code font text, and create links. Here’s a footnote 1. Here’s a horizontal rule: . . Lists . Here’s a list: . item 1 | item 2 | . And a numbered list: . item 1 | item 2 | Boxes and stuff . This is a quotation . . You can include alert boxes …and… . . You can include info boxes Images . . Code . You can format text and code per usual . General preformatted text: . # Do a thing do_thing() . Python code and output: . # Prints &#39;2&#39; print(1+1) . 2 . Formatting text as shell commands: . echo &quot;hello world&quot; ./some_script.sh --option &quot;value&quot; wget https://example.com/cat_photo1.png . Formatting text as YAML: . key: value - another_key: &quot;another value&quot; . Tables . Column 1 Column 2 . A thing | Another thing | . Tweetcards . Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 Footnotes . This is the footnote. &#8617; . |",
             "url": "https://q-tipwithaface.github.io/Q-tip/markdown/2020/01/14/test-markdown-post.html",
