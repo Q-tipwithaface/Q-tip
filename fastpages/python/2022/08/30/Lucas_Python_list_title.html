@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      7 min read
     
 </span></p>
 
@@ -131,6 +131,7 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#Standard-Print:">Standard Print: </a></li>
+<li class="toc-entry toc-h2"><a href="#InfoDb-For-loop-with-output:">InfoDb For loop with output: </a></li>
 <li class="toc-entry toc-h2"><a href="#InfoDb-For-loop-with-Index-output:">InfoDb For loop with Index output: </a></li>
 <li class="toc-entry toc-h2"><a href="#InfoDb-while-loop-output:">InfoDb while loop output: </a></li>
 <li class="toc-entry toc-h2"><a href="#InfoDb-recursion-loop-output:">InfoDb recursion loop output: </a></li>
@@ -237,10 +238,139 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="InfoDb-For-loop-with-output:">
+<a class="anchor" href="#InfoDb-For-loop-with-output:" aria-hidden="true"><span class="octicon octicon-link"></span></a>InfoDb For loop with output:<a class="anchor-link" href="#InfoDb-For-loop-with-output:"> </a>
+</h2>
+<p>For loop results in the InfoDb becoming organized by their stand alone records. It creates the same output as InfoDb for loop with index, InfoDb while loop, and InfoDb recursion loop.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
+
+<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Mortensen"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"October 21"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"jmortensen@powayusd.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"2015-Fusion"</span><span class="p">,</span> <span class="s2">"2011-Ranger"</span><span class="p">,</span> <span class="s2">"2003-Excursion"</span><span class="p">,</span> <span class="s2">"1997-F350"</span><span class="p">,</span> <span class="s2">"1969-Cadillac"</span><span class="p">]</span>
+<span class="p">})</span>
+
+
+
+<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Sunny"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Naidu"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"August 2"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Temecula"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"snaidu@powayusd.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"4Runner"</span><span class="p">]</span>
+    
+<span class="p">})</span>
+
+
+<span class="c1"># Personal Info</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Lucas"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Moore"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Decemeber 16"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"lem16silver@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
+    
+<span class="p">})</span>
+
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Aniket"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakrado"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Febuary 20"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@charadeo.net"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Red-Buggati"</span><span class="p">]</span>
+    
+<span class="p">})</span>
+<span class="c1"># Print the data structure</span>
+<span class="c1">#print(InfoDb)</span>
+
+<span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">])</span>  <span class="c1"># using comma puts space between values</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Residence"</span><span class="p">])</span> <span class="c1"># \t is a tab indent</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"DOB"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Cars: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>  <span class="c1"># end="" make sure no return occurs</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"Owns_Cars"</span><span class="p">]))</span>  <span class="c1"># join allows printing a string list with separator</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+    <span class="c1"># for loop algorithm contains an initial n and an index incrementing statement (n += 1)</span>
+<span class="k">def</span> <span class="nf">for_incloop</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"for increment loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+
+<span class="n">for_incloop</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>for increment loop output
+
+John Mortensen
+	 Residence: San Diego
+	 Birth Day: October 21
+	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
+
+Sunny Naidu
+	 Residence: Temecula
+	 Birth Day: August 2
+	 Cars: 4Runner
+
+Lucas Moore
+	 Residence: 4S Ranch
+	 Birth Day: Decemeber 16
+	 Cars: None
+
+Aniket Chakrado
+	 Residence: 4S Ranch
+	 Birth Day: Febuary 20
+	 Cars: Red-Buggati
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="InfoDb-For-loop-with-Index-output:">
 <a class="anchor" href="#InfoDb-For-loop-with-Index-output:" aria-hidden="true"><span class="octicon octicon-link"></span></a>InfoDb For loop with Index output:<a class="anchor-link" href="#InfoDb-For-loop-with-Index-output:"> </a>
 </h2>
-<p>For loop with index results in the InfoDb becoming organized by their stand alone records. It creates the same output as InfoDb while loop and InfoDb recursion loop.</p>
+<p>For loop with index results in the InfoDb becoming organized by their stand alone records. It creates the same output as InfoDb for loop, InfoDb while loop, and InfoDb recursion loop.</p>
 
 </div>
 </div>
@@ -368,7 +498,7 @@ Aniket Chakrado
 <h2 id="InfoDb-while-loop-output:">
 <a class="anchor" href="#InfoDb-while-loop-output:" aria-hidden="true"><span class="octicon octicon-link"></span></a>InfoDb while loop output:<a class="anchor-link" href="#InfoDb-while-loop-output:"> </a>
 </h2>
-<p>While loop results in the InfoDb becoming organized by their stand alone records. It creates the same output as InfoDb for loop with index and InfoDb recursion loop.</p>
+<p>While loop results in the InfoDb becoming organized by their stand alone records. It creates the same output as InfoDb for loop, InfoDb for loop with index, and InfoDb recursion loop.</p>
 
 </div>
 </div>
@@ -500,7 +630,7 @@ Aniket Chakrado
 <h2 id="InfoDb-recursion-loop-output:">
 <a class="anchor" href="#InfoDb-recursion-loop-output:" aria-hidden="true"><span class="octicon octicon-link"></span></a>InfoDb recursion loop output:<a class="anchor-link" href="#InfoDb-recursion-loop-output:"> </a>
 </h2>
-<p>Recursion loop results in the InfoDb becoming organized by their stand alone records. It creates the same output as InfoDb for loop with index and InfoDb while loop.</p>
+<p>Recursion loop results in the InfoDb becoming organized by their stand alone records. It creates the same output as InfoDb for loop, InfoDb for loop with index, and InfoDb while loop.</p>
 
 </div>
 </div>
