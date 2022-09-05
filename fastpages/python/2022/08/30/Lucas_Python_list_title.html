@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -167,48 +167,71 @@ window.onload = wrap_img;
 <span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
 
 <span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Mortensen"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"October 21"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"jmortensen@powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"2015-Fusion"</span><span class="p">,</span> <span class="s2">"2011-Ranger"</span><span class="p">,</span> <span class="s2">"2003-Excursion"</span><span class="p">,</span> <span class="s2">"1997-F350"</span><span class="p">,</span> <span class="s2">"1969-Cadillac"</span><span class="p">]</span>
-<span class="p">})</span>
+<span class="c1">#InfoDb.append({</span>
+<span class="c1">#    "FirstName": "John",</span>
+<span class="c1">#   "LastName": "Mortensen",</span>
+<span class="c1">#    "DOB": "October 21",</span>
+<span class="c1">#    "Residence": "San Diego",</span>
+<span class="c1">#    "Email": "jmortensen@powayusd.com",</span>
+<span class="c1">#    "Owns_Cars": ["2015-Fusion", "2011-Ranger", "2003-Excursion", "1997-F350", "1969-Cadillac"]</span>
+<span class="c1">#})</span>
 
 
 
 <span class="c1"># Append to List a 2nd Dictionary of key/values</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Sunny"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Naidu"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"August 2"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Temecula"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"snaidu@powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"4Runner"</span><span class="p">]</span>
+<span class="c1">#InfoDb.append({</span>
+<span class="c1">#    "FirstName": "Sunny",</span>
+<span class="c1">#    "LastName": "Naidu",</span>
+<span class="c1">#    "DOB": "August 2",</span>
+<span class="c1">#    "Residence": "Temecula",</span>
+<span class="c1">#    "Email": "snaidu@powayusd.com",</span>
+<span class="c1">#    "Owns_Cars": ["4Runner"]</span>
     
-<span class="p">})</span>
+<span class="c1">#})</span>
 
 
 <span class="c1"># Personal Info</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Lucas"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Moore"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Decemeber 16"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"December 16"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Blonde"</span><span class="p">,</span>
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
     <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"lem16silver@gmail.com"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
-    
 <span class="p">})</span>
 
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Aniket"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakrado"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakradeo"</span><span class="p">,</span>
     <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Febuary 20"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@charadeo.net"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@chakradeo.net"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Red-Buggati"</span><span class="p">]</span>
-    
+<span class="p">})</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Ryan"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Hakimipour"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"June 15"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"RyanHaki@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Soham"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kamat"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"March 9"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"sohamk10039@stu.powayusd.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
 <span class="p">})</span>
 <span class="c1"># Print data structure</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
@@ -224,7 +247,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[{'FirstName': 'John', 'LastName': 'Mortensen', 'DOB': 'October 21', 'Residence': 'San Diego', 'Email': 'jmortensen@powayusd.com', 'Owns_Cars': ['2015-Fusion', '2011-Ranger', '2003-Excursion', '1997-F350', '1969-Cadillac']}, {'FirstName': 'Sunny', 'LastName': 'Naidu', 'DOB': 'August 2', 'Residence': 'Temecula', 'Email': 'snaidu@powayusd.com', 'Owns_Cars': ['4Runner']}, {'FirstName': 'Lucas', 'LastName': 'Moore', 'DOB': 'Decemeber 16', 'Residence': '4S Ranch', 'Email': 'lem16silver@gmail.com', 'Owns_Cars': ['None']}, {'FirstName': 'Aniket', 'LastName': 'Chakrado', 'DOB': 'Febuary 20', 'Residence': '4S Ranch', 'Email': 'aniket@charadeo.net', 'Owns_Cars': ['Red-Buggati']}]
+<pre>[{'FirstName': 'Lucas', 'LastName': 'Moore', 'DOB': 'December 16', 'Age': '15', 'HairColor': 'Blonde', 'Residence': '4S Ranch', 'Email': 'lem16silver@gmail.com', 'Owns_Cars': ['None']}, {'FirstName': 'Aniket', 'LastName': 'Chakradeo', 'DOB': 'Febuary 20', 'Age': '15', 'HairColor': 'Black', 'Residence': '4S Ranch', 'Email': 'aniket@chakradeo.net', 'Owns_Cars': ['Red-Buggati']}, {'FirstName': 'Ryan', 'LastName': 'Hakimipour', 'DOB': 'June 15', 'Age': '15', 'HairColor': 'Black', 'Residence': 'San Diego', 'Email': 'RyanHaki@gmail.com', 'Owns_Cars': ['None']}, {'FirstName': 'Soham', 'LastName': 'Kamat', 'DOB': 'March 9', 'Age': '15', 'HairColor': 'Black', 'Residence': 'San Diego', 'Email': 'sohamk10039@stu.powayusd.com', 'Owns_Cars': ['None']}]
 </pre>
 </div>
 </div>
@@ -258,48 +281,73 @@ window.onload = wrap_img;
 <span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
 
 <span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Mortensen"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"October 21"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"jmortensen@powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"2015-Fusion"</span><span class="p">,</span> <span class="s2">"2011-Ranger"</span><span class="p">,</span> <span class="s2">"2003-Excursion"</span><span class="p">,</span> <span class="s2">"1997-F350"</span><span class="p">,</span> <span class="s2">"1969-Cadillac"</span><span class="p">]</span>
-<span class="p">})</span>
+<span class="c1">#InfoDb.append({</span>
+<span class="c1">#    "FirstName": "John",</span>
+<span class="c1">#   "LastName": "Mortensen",</span>
+<span class="c1">#    "DOB": "October 21",</span>
+<span class="c1">#    "Residence": "San Diego",</span>
+<span class="c1">#    "Email": "jmortensen@powayusd.com",</span>
+<span class="c1">#    "Owns_Cars": ["2015-Fusion", "2011-Ranger", "2003-Excursion", "1997-F350", "1969-Cadillac"]</span>
+<span class="c1">#})</span>
 
 
 
 <span class="c1"># Append to List a 2nd Dictionary of key/values</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Sunny"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Naidu"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"August 2"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Temecula"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"snaidu@powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"4Runner"</span><span class="p">]</span>
+<span class="c1">#InfoDb.append({</span>
+<span class="c1">#    "FirstName": "Sunny",</span>
+<span class="c1">#    "LastName": "Naidu",</span>
+<span class="c1">#    "DOB": "August 2",</span>
+<span class="c1">#    "Residence": "Temecula",</span>
+<span class="c1">#    "Email": "snaidu@powayusd.com",</span>
+<span class="c1">#    "Owns_Cars": ["4Runner"]</span>
     
-<span class="p">})</span>
+<span class="c1">#})</span>
+    
 
 
+<span class="c1"># Personal Info</span>
 <span class="c1"># Personal Info</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Lucas"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Moore"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Decemeber 16"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"December 16"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Blonde"</span><span class="p">,</span>
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
     <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"lem16silver@gmail.com"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
-    
 <span class="p">})</span>
 
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Aniket"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakrado"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakradeo"</span><span class="p">,</span>
     <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Febuary 20"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@charadeo.net"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@chakradeo.net"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Red-Buggati"</span><span class="p">]</span>
-    
+<span class="p">})</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Ryan"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Hakimipour"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"June 15"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"RyanHaki@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Soham"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kamat"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"March 9"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"sohamk10039@stu.powayusd.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
 <span class="p">})</span>
 <span class="c1"># Print the data structure</span>
 <span class="c1">#print(InfoDb)</span>
@@ -334,25 +382,25 @@ window.onload = wrap_img;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>for increment loop output
 
-John Mortensen
-	 Residence: San Diego
-	 Birth Day: October 21
-	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
-
-Sunny Naidu
-	 Residence: Temecula
-	 Birth Day: August 2
-	 Cars: 4Runner
-
 Lucas Moore
 	 Residence: 4S Ranch
-	 Birth Day: Decemeber 16
+	 Birth Day: December 16
 	 Cars: None
 
-Aniket Chakrado
+Aniket Chakradeo
 	 Residence: 4S Ranch
 	 Birth Day: Febuary 20
 	 Cars: Red-Buggati
+
+Ryan Hakimipour
+	 Residence: San Diego
+	 Birth Day: June 15
+	 Cars: None
+
+Soham Kamat
+	 Residence: San Diego
+	 Birth Day: March 9
+	 Cars: None
 
 </pre>
 </div>
@@ -387,48 +435,71 @@ Aniket Chakrado
 <span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
 
 <span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Mortensen"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"October 21"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"jmortensen@powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"2015-Fusion"</span><span class="p">,</span> <span class="s2">"2011-Ranger"</span><span class="p">,</span> <span class="s2">"2003-Excursion"</span><span class="p">,</span> <span class="s2">"1997-F350"</span><span class="p">,</span> <span class="s2">"1969-Cadillac"</span><span class="p">]</span>
-<span class="p">})</span>
+<span class="c1">#InfoDb.append({</span>
+<span class="c1">#    "FirstName": "John",</span>
+<span class="c1">#    "LastName": "Mortensen",</span>
+<span class="c1">#    "DOB": "October 21",</span>
+<span class="c1">#    "Residence": "San Diego",</span>
+<span class="c1">#    "Email": "jmortensen@powayusd.com",</span>
+<span class="c1">#    "Owns_Cars": ["2015-Fusion", "2011-Ranger", "2003-Excursion", "1997-F350", "1969-Cadillac"]</span>
+<span class="c1">#})</span>
 
 
 
 <span class="c1"># Append to List a 2nd Dictionary of key/values</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Sunny"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Naidu"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"August 2"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Temecula"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"snaidu@powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"4Runner"</span><span class="p">]</span>
+<span class="c1">#InfoDb.append({</span>
+<span class="c1">#    "FirstName": "Sunny",</span>
+<span class="c1">#    "LastName": "Naidu",</span>
+<span class="c1">#    "DOB": "August 2",</span>
+<span class="c1">#    "Residence": "Temecula",</span>
+<span class="c1">#    "Email": "snaidu@powayusd.com",</span>
+<span class="c1">#    "Owns_Cars": ["4Runner"]</span>
     
-<span class="p">})</span>
+<span class="c1">#})</span>
 
 
 <span class="c1"># Personal Info</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Lucas"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Moore"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Decemeber 16"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"December 16"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Blonde"</span><span class="p">,</span>
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
     <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"lem16silver@gmail.com"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
-    
 <span class="p">})</span>
 
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Aniket"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakrado"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakradeo"</span><span class="p">,</span>
     <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Febuary 20"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@charadeo.net"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@chakradeo.net"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Red-Buggati"</span><span class="p">]</span>
-    
+<span class="p">})</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Ryan"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Hakimipour"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"June 15"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"RyanHaki@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Soham"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kamat"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"March 9"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"sohamk10039@stu.powayusd.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
 <span class="p">})</span>
 <span class="c1"># Print the data structure</span>
 <span class="c1">#print(InfoDb)</span>
@@ -462,25 +533,25 @@ Aniket Chakrado
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>For loop output
 
-John Mortensen
-	 Residence: San Diego
-	 Birth Day: October 21
-	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
-
-Sunny Naidu
-	 Residence: Temecula
-	 Birth Day: August 2
-	 Cars: 4Runner
-
 Lucas Moore
 	 Residence: 4S Ranch
-	 Birth Day: Decemeber 16
+	 Birth Day: December 16
 	 Cars: None
 
-Aniket Chakrado
+Aniket Chakradeo
 	 Residence: 4S Ranch
 	 Birth Day: Febuary 20
 	 Cars: Red-Buggati
+
+Ryan Hakimipour
+	 Residence: San Diego
+	 Birth Day: June 15
+	 Cars: None
+
+Soham Kamat
+	 Residence: San Diego
+	 Birth Day: March 9
+	 Cars: None
 
 </pre>
 </div>
@@ -515,48 +586,71 @@ Aniket Chakrado
 <span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
 
 <span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Mortensen"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"October 21"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"jmortensen@powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"2015-Fusion"</span><span class="p">,</span> <span class="s2">"2011-Ranger"</span><span class="p">,</span> <span class="s2">"2003-Excursion"</span><span class="p">,</span> <span class="s2">"1997-F350"</span><span class="p">,</span> <span class="s2">"1969-Cadillac"</span><span class="p">]</span>
-<span class="p">})</span>
+<span class="c1">#InfoDb.append({</span>
+<span class="c1">#    "FirstName": "John",</span>
+<span class="c1">#    "LastName": "Mortensen",</span>
+<span class="c1">#    "DOB": "October 21",</span>
+<span class="c1">#    "Residence": "San Diego",</span>
+<span class="c1">#    "Email": "jmortensen@powayusd.com",</span>
+<span class="c1">#    "Owns_Cars": ["2015-Fusion", "2011-Ranger", "2003-Excursion", "1997-F350", "1969-Cadillac"]</span>
+<span class="c1">#})</span>
 
 
 
 <span class="c1"># Append to List a 2nd Dictionary of key/values</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Sunny"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Naidu"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"August 2"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Temecula"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"snaidu@powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"4Runner"</span><span class="p">]</span>
+<span class="c1">#InfoDb.append({</span>
+<span class="c1">#    "FirstName": "Sunny",</span>
+<span class="c1">#    "LastName": "Naidu",</span>
+<span class="c1">#    "DOB": "August 2",</span>
+<span class="c1">#    "Residence": "Temecula",</span>
+<span class="c1">#    "Email": "snaidu@powayusd.com",</span>
+<span class="c1">#    "Owns_Cars": ["4Runner"]</span>
     
-<span class="p">})</span>
+<span class="c1">#})</span>
 
 
 <span class="c1"># Personal Info</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Lucas"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Moore"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Decemeber 16"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"December 16"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Blonde"</span><span class="p">,</span>
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
     <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"lem16silver@gmail.com"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
-    
 <span class="p">})</span>
 
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Aniket"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakrado"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakradeo"</span><span class="p">,</span>
     <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Febuary 20"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@charadeo.net"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@chakradeo.net"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Red-Buggati"</span><span class="p">]</span>
-    
+<span class="p">})</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Ryan"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Hakimipour"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"June 15"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"RyanHaki@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Soham"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kamat"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"March 9"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"sohamk10039@stu.powayusd.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
 <span class="p">})</span>
 <span class="c1"># Print the data structure</span>
 <span class="c1">#print(InfoDb)</span>
@@ -594,25 +688,25 @@ Aniket Chakrado
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>While loop output
 
-John Mortensen
-	 Residence: San Diego
-	 Birth Day: October 21
-	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
-
-Sunny Naidu
-	 Residence: Temecula
-	 Birth Day: August 2
-	 Cars: 4Runner
-
 Lucas Moore
 	 Residence: 4S Ranch
-	 Birth Day: Decemeber 16
+	 Birth Day: December 16
 	 Cars: None
 
-Aniket Chakrado
+Aniket Chakradeo
 	 Residence: 4S Ranch
 	 Birth Day: Febuary 20
 	 Cars: Red-Buggati
+
+Ryan Hakimipour
+	 Residence: San Diego
+	 Birth Day: June 15
+	 Cars: None
+
+Soham Kamat
+	 Residence: San Diego
+	 Birth Day: March 9
+	 Cars: None
 
 </pre>
 </div>
@@ -647,48 +741,71 @@ Aniket Chakrado
 <span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
 
 <span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Mortensen"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"October 21"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"jmortensen@powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"2015-Fusion"</span><span class="p">,</span> <span class="s2">"2011-Ranger"</span><span class="p">,</span> <span class="s2">"2003-Excursion"</span><span class="p">,</span> <span class="s2">"1997-F350"</span><span class="p">,</span> <span class="s2">"1969-Cadillac"</span><span class="p">]</span>
-<span class="p">})</span>
+<span class="c1">#InfoDb.append({</span>
+<span class="c1">#    "FirstName": "John",</span>
+<span class="c1">#    "LastName": "Mortensen",</span>
+<span class="c1">#    "DOB": "October 21",</span>
+<span class="c1">#    "Residence": "San Diego",</span>
+<span class="c1">#    "Email": "jmortensen@powayusd.com",</span>
+<span class="c1">#    "Owns_Cars": ["2015-Fusion", "2011-Ranger", "2003-Excursion", "1997-F350", "1969-Cadillac"]</span>
+<span class="c1">#})</span>
 
 
 
 <span class="c1"># Append to List a 2nd Dictionary of key/values</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Sunny"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Naidu"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"August 2"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Temecula"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"snaidu@powayusd.com"</span><span class="p">,</span>
-    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"4Runner"</span><span class="p">]</span>
+<span class="c1">#InfoDb.append({</span>
+<span class="c1">#    "FirstName": "Sunny",</span>
+<span class="c1">#    "LastName": "Naidu",</span>
+<span class="c1">#    "DOB": "August 2",</span>
+<span class="c1">#    "Residence": "Temecula",</span>
+<span class="c1">#    "Email": "snaidu@powayusd.com",</span>
+<span class="c1">#    "Owns_Cars": ["4Runner"]</span>
     
-<span class="p">})</span>
+<span class="c1">#})</span>
 
 
 <span class="c1"># Personal Info</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Lucas"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Moore"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Decemeber 16"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"December 16"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Blonde"</span><span class="p">,</span>
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
     <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"lem16silver@gmail.com"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
-    
 <span class="p">})</span>
 
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Aniket"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakrado"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Chakradeo"</span><span class="p">,</span>
     <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"Febuary 20"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"4S Ranch"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@charadeo.net"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"aniket@chakradeo.net"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Red-Buggati"</span><span class="p">]</span>
-    
+<span class="p">})</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Ryan"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Hakimipour"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"June 15"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"RyanHaki@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Soham"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kamat"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"March 9"</span><span class="p">,</span>
+    <span class="s2">"Age"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
+    <span class="s2">"HairColor"</span><span class="p">:</span> <span class="s2">"Black"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"sohamk10039@stu.powayusd.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>  
 <span class="p">})</span>
 <span class="c1"># Print the data structure</span>
 <span class="c1">#print(InfoDb)</span>
@@ -725,25 +842,25 @@ Aniket Chakrado
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Recursive loop output
 
-John Mortensen
-	 Residence: San Diego
-	 Birth Day: October 21
-	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
-
-Sunny Naidu
-	 Residence: Temecula
-	 Birth Day: August 2
-	 Cars: 4Runner
-
 Lucas Moore
 	 Residence: 4S Ranch
-	 Birth Day: Decemeber 16
+	 Birth Day: December 16
 	 Cars: None
 
-Aniket Chakrado
+Aniket Chakradeo
 	 Residence: 4S Ranch
 	 Birth Day: Febuary 20
 	 Cars: Red-Buggati
+
+Ryan Hakimipour
+	 Residence: San Diego
+	 Birth Day: June 15
+	 Cars: None
+
+Soham Kamat
+	 Residence: San Diego
+	 Birth Day: March 9
+	 Cars: None
 
 </pre>
 </div>
