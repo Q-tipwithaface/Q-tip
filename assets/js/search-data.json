@@ -170,7 +170,7 @@
   
       ,"page0": {
           "title": "Schedule",
-          "content": "Work Schedule . This is a table that shows posts/notebooks that were created in past weeks. More will be added to the schedule as time and progess does on. . Week # | Posts |   | Issue(Hacks) | . 0 | First Post on Fastpage | First Jupyter Notebook | Hacks | . 1 | First Python Quiz | Image Test | Hacks | . 2 | HTML Hack Screenshots | InfoDb records | Hacks | . 3 | In progress |   |   | .",
+          "content": "Work Schedule . This is a table that shows posts/notebooks that were created in past weeks. More will be added to the schedule as time and progess does on. . Week # | Posts |   | Issue(Hacks) | Recap | . 0 | First Post on Fastpage | First Jupyter Notebook | Hacks | understand how to use github, fastpages, and vscode. | . 1 | First Python Quiz | Image Test | Hacks | Tested programs like bash and vscode and updated Fastpages. | . 2 | HTML Hack Screenshots | InfoDb records | Hacks | Added more features(schedule, tags, search) into fastpages and learned how to use InfoDb records and List of dictionaries. | . 3 | In progress |   |   |   | .",
           "url": "https://q-tipwithaface.github.io/Q-tip/_pages/00_Schedule.html",
           "relUrl": "/_pages/00_Schedule.html",
           "date": ""
