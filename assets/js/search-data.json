@@ -36,7 +36,7 @@
     
         ,"post3": {
             "title": "AppLab Quiz BlogPost",
-            "content": "",
+            "content": "print(&quot;code&quot;) . code .",
             "url": "https://q-tipwithaface.github.io/Q-tip/fastpages/code/2022/09/07/AppLab_Quiz_BlogPost.html",
             "relUrl": "/fastpages/code/2022/09/07/AppLab_Quiz_BlogPost.html",
             "date": " • Sep 7, 2022"
