@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://q-tipwithaface.github.io/Q-tip/markdown/2020/01/14/test-markdown-post.html</loc>
-<lastmod>2020-01-14T00:00:00-06:00</lastmod>
-</url>
-<url>
-<loc>https://q-tipwithaface.github.io/Q-tip/jupyter/2020/02/20/test.html</loc>
-<lastmod>2020-02-20T00:00:00-06:00</lastmod>
-</url>
-<url>
 <loc>https://q-tipwithaface.github.io/Q-tip/fastpages/jupyter/python/2022/08/21/Lucas-First-Notebook-v2.html</loc>
 <lastmod>2022-08-21T00:00:00-05:00</lastmod>
 </url>
@@ -57,16 +49,20 @@
 <lastmod>2022-09-11T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://q-tipwithaface.github.io/Q-tip/2022/09/11/English-2-High-School-Notebook-Lucas-Moore.html</loc>
-<lastmod>2022-09-11T00:00:00-05:00</lastmod>
+<loc>https://q-tipwithaface.github.io/Q-tip/2022/09/15/English-2-High-School-Notebook-Lucas-Moore.html</loc>
+<lastmod>2022-09-15T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://q-tipwithaface.github.io/Q-tip/fastpages/jupyter/python/2022/09/11/Hacks-Key_Learning-Notebook.html</loc>
-<lastmod>2022-09-11T00:00:00-05:00</lastmod>
+<loc>https://q-tipwithaface.github.io/Q-tip/fastpages/jupyter/python/2022/09/15/Hacks-Key_Learning-Notebook.html</loc>
+<lastmod>2022-09-15T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://q-tipwithaface.github.io/Q-tip/fastpages/jupyter/bash/2022/09/11/Personal_Memory_Notebook-Bash.html</loc>
-<lastmod>2022-09-11T00:00:00-05:00</lastmod>
+<loc>https://q-tipwithaface.github.io/Q-tip/fastpages/jupyter/bash/2022/09/15/Personal_Memory_Notebook-Bash.html</loc>
+<lastmod>2022-09-15T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://q-tipwithaface.github.io/Q-tip/fastpages/human/2022/09/15/Psychology_and_the_Good_life_Notes.html</loc>
+<lastmod>2022-09-15T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://q-tipwithaface.github.io/Q-tip/_pages/00_Schedule.html</loc>
