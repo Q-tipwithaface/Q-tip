@@ -9,6 +9,13 @@ categories: [markdown]
 
 This is a table that shows posts/notebooks that were created in past weeks. More will be added to the schedule as time and progess does on.
 
+## Unit 2: Intro to Web Development
+Weeks 4 to 7
+
+
+## Unit 1: Intro to Tools and Resources
+Weeks 0 to 3
+
 | Week # | Posts |  | Issue(Hacks) | Recap |
 | 0 | [First Post on Fastpage](https://q-tipwithaface.github.io/Q-tip/2022/08/21/Lucas-First-Post.html) | [First Jupyter Notebook ](https://q-tipwithaface.github.io/Q-tip/fastpages/jupyter/python/2022/08/21/Lucas-First-Notebook-v2.html) | [Hacks](https://github.com/Q-tipwithaface/Q-tip/issues/3) | Understand how to use github, fastpages, and vscode. |
 | 1 | [First Python Quiz](https://q-tipwithaface.github.io/Q-tip/2022/08/28/python_quiz.html) | [Image Test](https://q-tipwithaface.github.io/Q-tip/markdown/2022/08/29/postwithimage.html) | [Hacks](https://github.com/Q-tipwithaface/Q-tip/issues/4) | Tested programs like bash and vscode and updated Fastpages. |
