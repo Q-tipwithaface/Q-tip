@@ -12,6 +12,8 @@ This is a table that shows posts/notebooks that were created in past weeks. More
 ## Unit 2: Intro to Web Development
 Weeks 4 to 7
 
+| Week # | Posts | | Issues(Hacks) | Recap |
+| 4 | | | | |
 
 ## Unit 1: Intro to Tools and Resources
 Weeks 0 to 3
