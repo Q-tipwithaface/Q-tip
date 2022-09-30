@@ -1,6 +1,6 @@
 ---
 keywords: fastai
-title: Unit 1.2 Program Purpose Notes
+title: Unit 1.2 Program, Function, and Purpose Notes
 toc: true
 branch: master
 badges: true
@@ -22,8 +22,9 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Main-Idea:-Why-should-computing-innovation-have-a-purpose?-What-is-its-purpose?">Main Idea: Why should computing innovation have a purpose? What is its purpose?<a class="anchor-link" href="#Main-Idea:-Why-should-computing-innovation-have-a-purpose?-What-is-its-purpose?"> </a></h2><p>Computing innovation has a purpose because understanding the purpose of the innovation helps the developers improve their skills and ability to create the computing innovation they are working on. All computing innovations are builted with a purpose in mind because that is what guides the development process of the innovation.</p>
-<p>The purpose of computing innovations is to solve problems or pursue interests. Most of the problems are not necessary but does make our daily lifes a lot easier.</p>
+<h2 id="Main-Idea:-Why-should-computing-innovation-have-a-purpose-and-what-is-it?">Main Idea: Why should computing innovation have a purpose and what is it?<a class="anchor-link" href="#Main-Idea:-Why-should-computing-innovation-have-a-purpose-and-what-is-it?"> </a></h2><p>Computing innovation has a purpose because understanding the purpose of the innovation helps the developers improve their skills and ability to create the computing innovation they are working on. All computing innovations are builted with a purpose in mind because that is what guides the development process of the innovation. The purpose of computing innovations is to solve problems or pursue interests. Most of the problems are not necessary but does make our daily lifes a lot easier. For the innovation made in this class, its purpose is to teach them about code and/or shown what they learned.</p>
+<h2 id="Inputs,-Events,-Actions,-and-Outputs:">Inputs, Events, Actions, and Outputs:<a class="anchor-link" href="#Inputs,-Events,-Actions,-and-Outputs:"> </a></h2><p>Inputs are data that are sent into a computer for it to process through a given program. Forms of Input include text, numerical values, visual, tactile, and audio. Additionally, an event that triggers an action supplies a given input to the program it is in. A input can also be an action that triggers an event. To put it simiply, inputs can come from a user or other parts of the program. Event-driven programming results in program statements becoming active when triggered. The program can jump between code segment based on the event. Those events can be caused by anything; key pressed, mouse clicked, program started, timer, and many more. The inputs created normally affect other events and the output produced by a program. All of these types of inputs and events normally results in outputs. Program outputs are data sent from a program to the user or device. They can come in many different forms including but not limited to tactile, audio, visual, or text. Computer Programs take inputs in many different ways allowing them to influence the program's behavior differently.</p>
+<h2 id="Details-About-a-Program:">Details About a Program:<a class="anchor-link" href="#Details-About-a-Program:"> </a></h2><p>A program is a collection of program statements that do a specific task when run. A program is also called software. A Program must be flexiable to work with different inputs and situations. The behavior of a program is how the program functions while it's running and is often affected by the user. A Program can be described based on what is does and also by how the program statements state the functions. A code segment is a collection of program statements that is part of a program. Focused on one specfic task.</p>
 
 </div>
 </div>
