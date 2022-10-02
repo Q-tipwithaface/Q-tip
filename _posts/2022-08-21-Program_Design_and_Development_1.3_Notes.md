@@ -22,35 +22,51 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Unit-1.3-Video-notes:">Unit 1.3 Video notes:<a class="anchor-link" href="#Unit-1.3-Video-notes:"> </a></h1><hr>
-
+<h2 id="Unit-1.3-Video-notes:">Unit 1.3 Video notes:<a class="anchor-link" href="#Unit-1.3-Video-notes:"> </a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="My-Group-Project-Info:">My Group Project Info:<a class="anchor-link" href="#My-Group-Project-Info:"> </a></h2><p><mark>Main Idea about the Project:</p>
-<p>Me and my Group have decided to code a program that will simulate a game of hangman. Hangman is a game between two or more players. One player known as the executioner thinks up of a word or a sentence and at least one other person needs to guess what that word or sentence might be going one letter at a time. If the guesser(s) guess a letter that is not in the phase, the executioner draws a body part of a stick figure onto a gallow. If the executioner draws all the body parts, the guessers lose and the game is over. If the guessers complete the phase, they win.</p>
-<p><mark>Purpose of Program:</p>
-<p>The Purpose of this program is to teach and/or test the user's vocabulary skills. This is done through hangman by displaying a definition of the unknown word or by displaying a topic that relates to the unknown sentence. They must have good vocabalury skills to win the game as well as good grammer.</p>
-<p><mark>Brainstormed Ideas:</p>
-<p>The game is going to be like traditional hangman but there are ideas that will make the coding more interesting and make it more fun for the user.</p>
+<h2 id="My-Group-Project-Info:">My Group Project Info:<a class="anchor-link" href="#My-Group-Project-Info:"> </a></h2><ul>
+<li><p>Main Idea about the Project:</p>
+<ul>
+<li>Me and my Group have decided to code a program that will simulate a game of hangman. Hangman is a game between two or more players. One player known as the executioner thinks up of a word or a sentence and at least one other person needs to guess what that word or sentence might be going one letter at a time. If the guesser(s) guess a letter that is not in the phase, the executioner draws a body part of a stick figure onto a gallow. If the executioner draws all the body parts, the guessers lose and the game is over. If the guessers complete the phase, they win.</li>
+</ul>
+<hr>
+</li>
+<li><p>Purpose of Program:</p>
+<ul>
+<li>The Purpose of this program is to teach and/or test the user's vocabulary skills. This is done through hangman by displaying a definition of the unknown word or by displaying a topic that relates to the unknown sentence. They must have good vocabalury skills to win the game as well as good grammer.</li>
+</ul>
+<hr>
+</li>
+<li><p>Brainstormed Ideas:</p>
+<ul>
+<li><p>The game is going to be like traditional hangman but there are ideas that will make the coding more interesting and make it more fun for the user.</p>
 <ol>
 <li><p>Timer: A timer can be added to the game to make it feel more fast paced. A timer will reset every time the user guesses a letter, no matter if it is right or wrong. If the timer finishes before the user guesses, it will automatically draw a body part and reset.</p>
 </li>
 <li><p>Definition: A text box of the definition of the unknown word will appear. This definition will guide the user into guessing the correct word.</p>
 </li>
 </ol>
-<p><mark>Requirements and Constraints:</p>
-<p>The requirement is to create a program with a eductional purpose and present it in class by the end of the trimester.</p>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>Requirements and Constraints:</p>
 <ul>
+<li>The requirement is to create a program with a eductional purpose and present it in class by the end of the trimester. It also must be a project that the group will not lose interest in in a few weeks. This will mean the project must be updated throughout the weeks even after the main code is complete. The biggest constraint for building this program is time. Me and my group only have a few weeks to create the code and are expected to receive many other assignments that might give us less time. That plus the lack of knowledge and experience. However, the point of this assignment is to enhance our knowledge and provide the coders with experience so this is less of a constraint and more of a learning opportunity.</li>
+</ul>
+<hr>
+</li>
 <li><p>Project's Impact:</p>
 <ul>
-<li>type here</li>
+<li>The Project will have an impact on the coders and the users. It will impact the coders because it will provide them with knowledge and experince about code. It will impact the users because it should be able to enhance their vocabulary and some rules about grammer and words.</li>
 </ul>
+<hr>
 </li>
-<li><p>Hacks:</p>
-<ul>
+<li>Data for the Code:<ul>
 <li>type here</li>
 </ul>
 </li>
