@@ -13,7 +13,9 @@ This is a table that shows posts/notebooks that were created in past weeks. More
 Weeks 4 to 7
 
 | Week # | Posts | | Issues(Hacks) | Recap |
-| 4 |Work in Progess | | | |
+| 4 |Work in Progess | | | Created a local server using flask and a local fastpage server and gained knowledge about the importance of collaboration. |
+| 5 |Work in Progess | | | Customized local flask server and fastpages and assigned roles to each team member for the group project. |
+| 6 |Work in Progess | | | Launched a group terminal in AWS with our local flask servers and brainstormed more ideas for our group project. |
 
 ## Unit 1: Intro to Tools and Resources
 Weeks 0 to 3
