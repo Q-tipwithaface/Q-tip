@@ -85,14 +85,8 @@ layout: notebook
 </ul>
 <hr>
 </li>
-<li><p>Project's Impact:</p>
-<ul>
+<li>Project's Impact:<ul>
 <li>The Project will have an impact on the coders and the users. It will impact the coders because it will provide them with knowledge and experince about code. It will impact the users because it should be able to enhance their vocabulary and some rules about grammer and words.</li>
-</ul>
-<hr>
-</li>
-<li>Data for the Code:<ul>
-<li>type here</li>
 </ul>
 </li>
 </ul>
