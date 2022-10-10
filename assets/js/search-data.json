@@ -317,7 +317,9 @@
   
 
   
-      ,"page4": {
+
+  
+      ,"page5": {
           "title": "About Me",
           "content": "My name is Lucas and I am a sophomore at Del Norte High School. . I am taking an AP Computer Principal class to get a better understanding of how a computer works and what it can do. .",
           "url": "https://q-tipwithaface.github.io/Q-tip/about/",
@@ -353,7 +355,7 @@
   
 
   
-      ,"page15": {
+      ,"page16": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://q-tipwithaface.github.io/Q-tip/robots.txt",
