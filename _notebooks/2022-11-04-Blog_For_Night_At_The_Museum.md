@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: Picture of cat
+description: Blog about the Night That the Museum
 categories: [markdown]
-title: Cat pic
+title: Night That the Museum Trimester 1 Blog
 ---
 
 # Other Art From Other Classes
