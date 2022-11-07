@@ -6,7 +6,7 @@ categories: [markdown, Final]
 title: Missed Questions on the Trimester 1 final
 ---
 
-# Image of Test Score
+![]({{ site.baseurl }}/images/Tri1FinalAPCSP.jpg "Tri 1 Final")
 
 ## Question 17
 words
