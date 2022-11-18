@@ -102,6 +102,7 @@ type: pbl
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
         // Character conversion
+        // Characters based on ASCII
         ascii_char = parseInt(binary, 2)
         if (ascii_char > 31 && ascii_char < 127) 
             document.getElementById('character').innerHTML = String.fromCharCode(ascii_char);
