@@ -1,11 +1,11 @@
 ---
 keywords: fastai
-title: Big idea 3 Lesson 3 and 4
+title: Big Idea 3 Lesson 3 and 4
 toc: true
 branch: master
 badges: true
 comments: true
-author: Notes filled in by Lucas Moore
+author: Lucas Moore
 categories: [fastpages, Big Idea 3]
 nb_path: _notebooks/2022-11-18-expressions-and-strings.ipynb
 layout: notebook
@@ -22,7 +22,7 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.3-Expressions(Show-video-1-and-3)">3.3 Expressions(Show video 1 and 3)<a class="anchor-link" href="#3.3-Expressions(Show-video-1-and-3)"> </a></h2>
+<h2 id="3.3-Expressions">3.3 Expressions<a class="anchor-link" href="#3.3-Expressions"> </a></h2>
 </div>
 </div>
 </div>
@@ -189,7 +189,7 @@ Hint: use the MOD operator (a % b) to find the remainder when a is divided by b.
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.4-Strings(Show-video-1)">3.4 Strings(Show video 1)<a class="anchor-link" href="#3.4-Strings(Show-video-1)"> </a></h2>
+<h2 id="3.4-Strings">3.4 Strings<a class="anchor-link" href="#3.4-Strings"> </a></h2>
 </div>
 </div>
 </div>
@@ -245,7 +245,7 @@ Hint: use the MOD operator (a % b) to find the remainder when a is divided by b.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#the substring will have the characters including the index &quot;start&quot; to the character BEFORE the index &quot;end&quot;</span>
-<span class="c1">#len(string) will print the length of string</span>
+<span class="c1">#len(string) will print length of the string</span>
 
 <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;hellobye&quot;</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
