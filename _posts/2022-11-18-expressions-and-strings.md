@@ -292,7 +292,7 @@ bye
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">string1</span> <span class="o">=</span> <span class="s2">&quot;computer&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">string1</span> <span class="o">=</span> <span class="s2">&quot;Computer&quot;</span>
 <span class="n">string2</span> <span class="o">=</span> <span class="s2">&quot; science&quot;</span>
 <span class="n">string3</span> <span class="o">=</span> <span class="n">string1</span> <span class="o">+</span> <span class="n">string2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">string3</span><span class="p">)</span>
@@ -308,7 +308,7 @@ bye
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>computer science
+<pre>Computer science
 </pre>
 </div>
 </div>
@@ -337,7 +337,7 @@ bye
 
 <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; (&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; (&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; letters)&quot;</span><span class="p">)</span>
 
 <span class="n">length</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 </pre></div>
@@ -352,10 +352,10 @@ bye
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Jaden (5)
-Max (3)
-Dylan (5)
-Orlando (7)
+<pre>Jaden (5 letters)
+Max (3 letters)
+Dylan (5 letters)
+Orlando (7 letters)
 </pre>
 </div>
 </div>
