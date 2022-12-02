@@ -333,12 +333,10 @@ bye
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jaden&quot;</span><span class="p">,</span><span class="s2">&quot;Max&quot;</span><span class="p">,</span><span class="s2">&quot;Dylan&quot;</span><span class="p">,</span><span class="s2">&quot;Orlando&quot;</span><span class="p">]</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">group</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jaden&quot;</span><span class="p">,</span><span class="s2">&quot;Max&quot;</span><span class="p">,</span><span class="s2">&quot;Dylan&quot;</span><span class="p">,</span><span class="s2">&quot;Orlando&quot;</span><span class="p">]</span>
 <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">group</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; (&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; letters)&quot;</span><span class="p">)</span>
-
 <span class="n">length</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 </pre></div>
 
