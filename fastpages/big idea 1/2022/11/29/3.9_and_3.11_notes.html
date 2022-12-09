@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      12 min read
     
 </span></p>
 
@@ -152,6 +152,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#if-else-statements">if-else statements </a></li>
 <li class="toc-entry toc-h2"><a href="#for-loops">for loops </a></li>
 <li class="toc-entry toc-h2"><a href="#Conditionals-vs-Booleans">Conditionals vs Booleans </a></li>
+<li class="toc-entry toc-h2"><a href="#Challenges-and-Homework">Challenges and Homework </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Homework">Homework </a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul><!--
@@ -1071,6 +1076,261 @@ for (let i = <em>number</em>; i &lt; <em>number</em>; i++) {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">sunny</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">umbrella</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span> 
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">rainy</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">umbrella</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span> 
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">umbrella</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">umbrella</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The code above is the same as below:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">umbrella</span> <span class="o">=</span> <span class="o">!</span>sunny <span class="o">&amp;&amp;</span> rainy<span class="p">;</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">umbrella</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To determine if two conditionals and booleans are the same, you can substitute the four possibilities that the two booleans (sunny and rainy) can be (listed below) into the conditional and boolean and see if both cases match:</p>
+<p><code>sunny = true</code>, <code>rainy = true</code></p>
+<p><code>sunny = true</code>, <code>rainy = false</code></p>
+<p><code>sunny = false</code>, <code>rainy = true</code></p>
+<p><code>sunny = false</code>, <code>rainy = false</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Challenges-and-Homework">
+<a class="anchor" href="#Challenges-and-Homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Challenges and Homework<a class="anchor-link" href="#Challenges-and-Homework"> </a>
+</h2>
+<p>You have one homework problem.</p>
+<p>Yes just one.</p>
+<p>Don't get excited though.</p>
+<p><strong>Problem:</strong> Given a specific integer <strong>N</strong>, return the square root of <strong>N</strong> (<strong>R</strong>) if <strong>N</strong> is a perfect square, otherwise, return the square root of <strong>N</strong> rounded down to the nearest integer</p>
+<p><strong>Input:</strong> <strong>N</strong> (Integer)</p>
+<p><strong>Output:</strong> <strong>R</strong> (Integer)</p>
+<p><strong>Constraints:</strong> Do not use any built-in math operations such as <code>sqrt(x)</code> or <code>x**(0.5)</code>, Try complete the problem in logarithmic time.</p>
+<p><strong>Hint 1:</strong> Maybe you can use Binary Search to try and reduce the number of checks you have to perform?</p>
+<p><strong>Hint 2:</strong> Is there a mathematical pattern amongst numbers and their square roots that could help you reduce the number of searches or iterations you must execute? Is there some value or rule you can set before applying binary search to narrow the range of possible values?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Run the very last code segment below to load test cases and submission function</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="c1"># Write your code here</span>
+    <span class="n">square</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">square</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">:</span>
+        <span class="n">r</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">square</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">r</span>
+    <span class="k">return</span> <span class="n">r</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">144</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span> <span class="k">as</span> <span class="n">sq</span>
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">85248289</span><span class="p">,</span><span class="mi">22297284</span><span class="p">,</span><span class="mi">18939904</span><span class="p">,</span><span class="mi">91107025</span><span class="p">,</span><span class="mi">69122596</span><span class="p">,</span><span class="mi">9721924</span><span class="p">,</span><span class="mi">37810201</span><span class="p">,</span><span class="mi">1893294144</span><span class="p">,</span><span class="mi">8722812816</span><span class="p">,</span><span class="mi">644398225</span><span class="p">]</span>
+<span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">sq</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">checkValid</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">test_cases</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">test_cases</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">answers</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Check number </span><span class="si">{}</span><span class="s2"> passed"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Check number </span><span class="si">{}</span><span class="s2"> failed"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="n">checkValid</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Check number 1 passed
+Check number 2 passed
+Check number 3 passed
+Check number 4 passed
+Check number 5 passed
+Check number 6 passed
+Check number 7 passed
+Check number 8 passed
+Check number 9 passed
+Check number 10 passed
+Check number 11 passed
+Check number 12 passed
+Check number 13 passed
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Homework">
+<a class="anchor" href="#Homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework<a class="anchor-link" href="#Homework"> </a>
+</h3>
+<p>Create an algorithm that will start with any positive integer n and display the full sequence of numbers that result from the Collatz Conjecture. The COllatz Conjecture is as follows:</p>
+<ol>
+<li>start with any positive integer</li>
+<li>if the number is even, divide by 2</li>
+<li>if the number is odd, multiply by 3 and add 1</li>
+<li>repeat steps 2 and 3 until you reach 1</li>
+</ol>
+<p>Example: if the starting number was 6, the output would be 6, 3, 10, 5, 16, 8, 4, 2, 1</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">N</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">while</span> <span class="n">N</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">N</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">N</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Not a positive integer"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">collatz</span><span class="p">(</span><span class="mi">13</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>13
+40
+20
+10
+5
+16
+8
+4
+2
+1
+None
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
