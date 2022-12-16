@@ -273,7 +273,7 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>6.984534740447998 seconds
+<pre>0.3406522274017334 seconds
 </pre>
 </div>
 </div>
@@ -305,15 +305,12 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 <span class="n">valuelist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">21</span><span class="p">]</span>
 <span class="k">def</span> <span class="nf">isvalue</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">array</span><span class="p">):</span>
     <span class="c1">#--------------------</span>
-    <span class="n">exists</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="k">while</span> <span class="n">exists</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
-            <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-                <span class="n">exists</span> <span class="o">=</span> <span class="kc">True</span>
-                <span class="c1">#return exists   #added</span>
-        <span class="k">if</span> <span class="n">exists</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">exists</span>
-    <span class="k">return</span> <span class="n">exists</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">False</span>
     <span class="c1">#--------------------</span>
 <span class="n">starttime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">):</span>
@@ -333,7 +330,7 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.3763277530670166 seconds
+<pre>0.1797022819519043 seconds
 </pre>
 </div>
 </div>
@@ -392,31 +389,31 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
         <span class="s1">'Westview'</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>
         <span class="s1">'MtCarmel'</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
         <span class="s1">'Poway'</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
-        <span class="s1">'RanchoBernrdo'</span><span class="p">:</span><span class="mi">50</span>
+        <span class="s1">'RanchoBernardo'</span><span class="p">:</span><span class="mi">50</span>
     <span class="p">},</span>
     <span class="s1">'Westview'</span><span class="p">:{</span>
-        <span class="s1">'Del Norte'</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>
+        <span class="s1">'DelNorte'</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>
         <span class="s1">'MtCarmel'</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
         <span class="s1">'Poway'</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span>
-        <span class="s1">'RanchoBernrdo'</span><span class="p">:</span> <span class="mi">45</span>
+        <span class="s1">'RanchoBernardo'</span><span class="p">:</span> <span class="mi">45</span>
     <span class="p">},</span>
     <span class="s1">'MtCarmel'</span><span class="p">:{</span>
         <span class="s1">'Westview'</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
-        <span class="s1">'Del Norte'</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
+        <span class="s1">'DelNorte'</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
         <span class="s1">'Poway'</span><span class="p">:</span><span class="mi">40</span><span class="p">,</span>
-        <span class="s1">'RanchoBernrdo'</span><span class="p">:</span><span class="mi">30</span>
+        <span class="s1">'RanchoBernardo'</span><span class="p">:</span><span class="mi">30</span>
     <span class="p">},</span>
     <span class="s1">'Poway'</span><span class="p">:{</span>
         <span class="s1">'Westview'</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span>
         <span class="s1">'MtCarmel'</span><span class="p">:</span><span class="mi">40</span><span class="p">,</span>
-        <span class="s1">'Del Norte'</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
-        <span class="s1">'RanchoBernrdo'</span><span class="p">:</span><span class="mi">15</span>
+        <span class="s1">'DelNorte'</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
+        <span class="s1">'RanchoBernardo'</span><span class="p">:</span><span class="mi">15</span>
     <span class="p">},</span>
     <span class="s1">'RanchoBernardo'</span><span class="p">:{</span>
         <span class="s1">'Westview'</span><span class="p">:</span><span class="mi">45</span><span class="p">,</span>
         <span class="s1">'MtCarmel'</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
         <span class="s1">'Poway'</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>
-        <span class="s1">'Del Norte'</span><span class="p">:</span><span class="mi">50</span>
+        <span class="s1">'DelNorte'</span><span class="p">:</span><span class="mi">50</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -435,17 +432,45 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fastestroute</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">data</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fastestroute</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
     <span class="n">drivetime</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">order</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1">#CODE,CODE,CODE</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">drivetime</span><span class="p">,</span><span class="n">order</span><span class="p">)</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="n">start</span><span class="p">]</span>
+    <span class="n">newplace</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">minimum_time</span> <span class="o">=</span> <span class="mi">1000</span>
+        <span class="k">for</span> <span class="n">place</span><span class="p">,</span> <span class="n">time</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="n">order</span><span class="p">[(</span><span class="nb">len</span><span class="p">(</span><span class="n">order</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="n">minimum_time</span> <span class="ow">and</span> <span class="n">place</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">order</span><span class="p">:</span>
+                <span class="n">newplace</span> <span class="o">=</span> <span class="n">place</span>
+                <span class="n">minimum_time</span> <span class="o">=</span> <span class="n">time</span>
+        <span class="n">drivetime</span> <span class="o">+=</span> <span class="n">minimum_time</span>
+        <span class="n">order</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newplace</span><span class="p">)</span>
+    <span class="n">order</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">drivetime</span> <span class="o">+=</span> <span class="n">data</span><span class="p">[</span><span class="n">newplace</span><span class="p">][</span><span class="n">start</span><span class="p">]</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">drivetime</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span>
 
 <span class="n">start</span> <span class="o">=</span> <span class="s1">'DelNorte'</span>
 <span class="c1"># 'dataset' is the name of the nested key value pair</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">fastestroute</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Drivetime: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">" minutes"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Order: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Drivetime: 105 minutes
+Order: ['DelNorte', 'Westview', 'Poway', 'RanchoBernardo', 'MtCarmel', 'DelNorte']
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
