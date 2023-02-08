@@ -6,32 +6,80 @@
 
 <body>
    <input type="Image" id="test1" src="/Q-tip/images/hamburger-frontend.jpg" height="150" width="150" onclick="scoreboard()" />
+   <input type="Image" id="test2" src="/Q-tip/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard()" />
+   <input type="Image" id="test3" src="/Q-tip/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard()" />
+   <input type="Image" id="test4" src="/Q-tip/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard()" />
+   <input type="Image" id="test5" src="/Q-tip/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard()" />
 
    <script>   
+      var score = 0;
       function scoreboard() {
-      score = score + 1;
-      console.log(score);
+         score = score + 100;
+         console.log(score);
+
+      }
+      
+      function moveimage(idid) {
+         var test = document.getElementById(idid);
+      // let w_screen = window.screen.availWidth - 150;
+      // let h_screen = window.screen.availHeight - 150;
+      test.style.top = Math.floor((Math.random() * 500) + 1) + "px";
+      test.style.left = Math.floor((Math.random() * 300) + 1) + "px";
+      test.style.visibility = 'visible';
+      }
+      
+      function clearimage(idid) {
+         var clear1 = document.getElementById(idid)
+         clear1.style.visibility = 'hidden';
       }
 
-      function moveimage() {
-      var test = document.getElementById("test1");
-      let w_screen = window.screen.availWidth - 150;
-      let h_screen = window.screen.availHeight - 150;
-      test.style.top = Math.floor((Math.random() * w_screen) + 1) + "px";
-      test.style.left = Math.floor((Math.random() * h_screen) + 1) + "px";    
+      function clearimages() {
+         clearimage("test1");
+         clearimage("test2");
+         clearimage("test3");
+         clearimage("test4");
+         clearimage("test5");
       }
-
-      function stop_moveimage() {
-      clearInterval(moveimage_interval);
-      clearTimeout(image_timeout);
+      
+      function stop_moveimage(moveimage_interval) {
+         clearInterval(moveimage_interval);
+         clearimages();
       }
    
 
+      function onscreen() {
+         clearimages();
+         something = Math.ceil(Math.random() * 5);
 
-      var score = 0;
-      moveimage();
-      moveimage_interval = setInterval(moveimage, 1000);
-      image_timeout = setTimeout(stop_moveimage, 10000);
+      if (something >= 1) {
+      moveimage("test1");
+      //moveimage_interval = setInterval(moveimage, 1000, "test1");
+      } 
+      if (something >= 2) {
+      moveimage("test2");
+      //moveimage_interval2 = setInterval(moveimage, 1000, "test2");
+      }
+      if (something >= 3) {
+      moveimage("test3");
+      //moveimage_interval3 = setInterval(moveimage, 1000, "test3");
+      }
+      if (something >= 4) {
+      moveimage("test4");
+      //moveimage_interval4 = setInterval(moveimage, 1000, "test4");
+      }
+      if (something >= 5) {
+      moveimage("test5");
+      //moveimage_interval5 = setInterval(moveimage, 1000, "test5");
+      }
+
+      // document.write("Score: " + score + " points");
+      }
+      
+      
+      thing = setInterval(onscreen, 1000)
+      image_timeout = setTimeout(stop_moveimage, 10000, thing);
+
+         
 
    </script>
 </body>
