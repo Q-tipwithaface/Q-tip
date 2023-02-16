@@ -4,7 +4,7 @@
    mode: 'no-cors'
    })
    .then(res => res.json())
-   .then(data => console.log(data));
+   .then(foodimages => console.log(foodimages));
 </script> -->
 
 <head>
@@ -15,48 +15,101 @@
 
 <body>
 
-<!-- <p id="picture"></p>
-
 <script>
 const foodimages = [
-   "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg", 
-   "https://thumbs.dreamstime.com/b/french-fries-cartoon-clipart-red-paper-box-carton-121897301.jpg"
+  {
+    "id": 1, 
+    "image": "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg", 
+    "name": "Burger", 
+    "points": "10"
+  }, 
+  {
+    "id": 2, 
+    "image": "https://thumbs.dreamstime.com/b/french-fries-cartoon-clipart-red-paper-box-carton-121897301.jpg", 
+    "name": "Fries", 
+    "points": "20"
+  }
 ];
-foodimages[1] = document.getElementById("picture").innerHTML;
-showme = foodimages[1]
-console.log(showme); -->
+
+console.log(foodimages);
+
+</script>
+
+<!--
+<script>
+u1 = food(name='Burger', points='10', image='https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg')
+
+    fooditems = [u1]
+
+</script>
 
 <script>
-var data_images1 = "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg"
-var data_images2 = "https://thumbs.dreamstime.com/b/french-fries-cartoon-clipart-red-paper-box-carton-121897301.jpg"
-console.log(data_images1)
-</script>
+   var data_images1 = "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg"
+   var data_images2 = "https://thumbs.dreamstime.com/b/french-fries-cartoon-clipart-red-paper-box-carton-121897301.jpg"
+   console.log(data_images1)
 
-<script type="text/javascript">
-image11 = "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg";
-document.getElementById('image').src = display(image11);
-function display()
-{
-return "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg"
+
+showpic(){
+   document.getElementsByTagName('burger').src = 'https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg'; 
 }
+
+
+
 </script>
 
-
-
-<input type="Image" id="test1" src="somevarible" height="150" width="150" onclick="scoreboard(1000)" />
+-->
+  
    
-   <!-- <input type="Image" id="test1" src="/Q-tip/images/hamburger-frontend.jpg" height="150" width="150" onclick="scoreboard(1000)" /> -->
-   <input type="Image" id="test2" src="/Q-tip/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard(-200)" />
-   <input type="Image" id="test3" src="/Q-tip/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard(-200)" />
-   <input type="Image" id="test4" src="/Q-tip/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard(-200)" />
-   <input type="Image" id="test5" src="/Q-tip/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard(-200)" />
+   <input type="Image" id="test1" src="" height="150" width="150" points="" onclick="scoreboard_sp(1)" />
+   <input type="Image" id="test2" src="" height="150" width="150" points="" onclick="scoreboard_sp(2)" />
+   <input type="Image" id="test3" src="" height="150" width="150" points="" onclick="scoreboard_sp(3)" />
+   <input type="Image" id="test4" src="" height="150" width="150" points="" onclick="scoreboard_sp(4)" />
+   <input type="Image" id="test5" src="" height="150" width="150" points="" onclick="scoreboard_sp(5)" />
+
+   <!-- <input type="Image" id="test1" src="/Q-tip/images/hamburger-frontend.jpg" height="150" width="150" onclick="scoreboard(1000)" />
+   <input type="Image" id="test2" src="/Q-tip/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard(-200)" /> -->
 
    <script>   
+
+      function get_images() {
+         // set image
+         document.getElementById("test1").src = foodimages[0].image;
+         document.getElementById("test2").src = foodimages[1].image;
+         document.getElementById("test3").src = foodimages[1].image;
+         document.getElementById("test4").src = foodimages[1].image;
+         document.getElementById("test5").src = foodimages[1].image;
+   
+         // set points
+         document.getElementById("test1").points = parseInt(foodimages[0].points);
+         document.getElementById("test2").points = parseInt(foodimages[1].points);
+         document.getElementById("test3").points = parseInt(foodimages[1].points);
+         document.getElementById("test4").points = parseInt(foodimages[1].points);
+         document.getElementById("test5").points = parseInt(foodimages[1].points);
+      }
+
       var score = 0;
-      function scoreboard(points) {
+      function scoreboard_sp(idid) {
+         if (idid == 1) {
+            points = document.getElementById("test1").points;
+         } else if (idid == 2) {
+            points = document.getElementById("test2").points;
+         } else if (idid == 3) {
+            points = document.getElementById("test3").points;
+         } else if (idid == 4) {
+            points = document.getElementById("test4").points;
+         } else if (idid == 5) {
+            points = document.getElementById("test5").points;
+         } else {
+            points = 0;
+         }
          score = score + points;
          console.log(score);
       }
+      
+      // function scoreboard(points) {
+      //    score = score + points;
+      //    console.log(score);
+      // }
 
       function moveimage(idid) {
          var test = document.getElementById(idid);
@@ -114,8 +167,8 @@ return "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minima
       // document.write("Score: " + score + " points");
       }
       
-      
-      thing = setInterval(onscreen, 1000)
+      get_images();
+      thing = setInterval(onscreen, 1000);
       image_timeout = setTimeout(stop_moveimage, 10000, thing);
 
          
