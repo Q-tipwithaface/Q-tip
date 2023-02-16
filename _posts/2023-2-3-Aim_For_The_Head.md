@@ -1,3 +1,12 @@
+<!-- <script>
+   //fetch('{{ site.baseurl }}/api/foods/', {
+   fetch('http://172.19.59.24:8543/api/foods/', {
+   mode: 'no-cors'
+   })
+   .then(res => res.json())
+   .then(data => console.log(data));
+</script> -->
+
 <head>
    <style> 
       input[type='Image'] { position: absolute; }
@@ -5,20 +14,50 @@
 </head>
 
 <body>
-   <input type="Image" id="test1" src="{{ site.baseurl }}/images/hamburger-frontend.jpg" height="150" width="150" onclick="scoreboard()" />
-   <input type="Image" id="test2" src="{{ site.baseurl }}/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard()" />
-   <input type="Image" id="test3" src="{{ site.baseurl }}/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard()" />
-   <input type="Image" id="test4" src="{{ site.baseurl }}/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard()" />
-   <input type="Image" id="test5" src="{{ site.baseurl }}/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard()" />
+
+<!-- <p id="picture"></p>
+
+<script>
+const foodimages = [
+   "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg", 
+   "https://thumbs.dreamstime.com/b/french-fries-cartoon-clipart-red-paper-box-carton-121897301.jpg"
+];
+foodimages[1] = document.getElementById("picture").innerHTML;
+showme = foodimages[1]
+console.log(showme); -->
+
+<script>
+var data_images1 = "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg"
+var data_images2 = "https://thumbs.dreamstime.com/b/french-fries-cartoon-clipart-red-paper-box-carton-121897301.jpg"
+console.log(data_images1)
+</script>
+
+<script type="text/javascript">
+image11 = "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg";
+document.getElementById('image').src = display(image11);
+function display()
+{
+return "https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-cute-minimalist-creative-cartoon-hamburger-png-image_611163.jpg"
+}
+</script>
+
+
+
+<input type="Image" id="test1" src=somevarible height="150" width="150" onclick="scoreboard(1000)" />
+   
+   <!-- <input type="Image" id="test1" src="{{ site.baseurl }}/images/hamburger-frontend.jpg" height="150" width="150" onclick="scoreboard(1000)" /> -->
+   <input type="Image" id="test2" src="{{ site.baseurl }}/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard(-200)" />
+   <input type="Image" id="test3" src="{{ site.baseurl }}/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard(-200)" />
+   <input type="Image" id="test4" src="{{ site.baseurl }}/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard(-200)" />
+   <input type="Image" id="test5" src="{{ site.baseurl }}/images/fries-frontend.jpg" height="150" width="150" onclick="scoreboard(-200)" />
 
    <script>   
       var score = 0;
-      function scoreboard() {
-         score = score + 100;
+      function scoreboard(points) {
+         score = score + points;
          console.log(score);
-
       }
-      
+
       function moveimage(idid) {
          var test = document.getElementById(idid);
       // let w_screen = window.screen.availWidth - 150;
