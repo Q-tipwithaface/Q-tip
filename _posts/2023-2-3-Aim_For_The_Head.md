@@ -1,11 +1,17 @@
 <!-- <script>
    //fetch('{{ site.baseurl }}/api/foods/', {
-   fetch('http://172.19.59.24:8543/api/foods/', {
+   fetch('http://172.19.59.24:8792/api/foods/', {
    mode: 'no-cors'
    })
    .then(res => res.json())
    .then(foodimages => console.log(foodimages));
 </script> -->
+
+<script>
+   fetch('http://172.19.59.24:8792/api/foods/')
+      .then(res => res.json())
+      .then(fooditems => console.log(fooditems))
+</script>
 
 <head>
    <style> 
