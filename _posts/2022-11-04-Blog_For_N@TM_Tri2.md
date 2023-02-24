@@ -9,17 +9,17 @@ title: Night At the Museum Trimester 2 Blog
 # Art From Other Classes
 
 ## 3D Animation
-3D Animation is a computer art class that uses blender to create pieces of art. . .
+3D Animation is a computer art class that uses blender to create pieces of art. 3D Animation creates art by using both the elements of art and the principles of design. This is an image of a room that contains Valentine's Day decorations. The shape used the most is the heart as that is what is used to represent love during Valentine's Day. The art piece also uses many colors to bring the room and the objects in it to life.
 
 ![]({{ site.baseurl }}/images/heartdonut.jpg "Picture For 3D Animation")
 
 ## Ceramics
-Ceramics is an art class that uses clay to build unique objects that can express their own artistic style. . .
+Ceramics is an art class that uses clay to build unique objects that can express ones own artistic style. Here is an image of an art piece from that class. It is a pot that is shaped as a chess rook and that sits on top of a chess board. The piece is made up of only two colors, probably so that the piece is designed similarly to a traditional chess board. 
 
 ![]({{ site.baseurl }}/images/clayrook.jpg "Picture For Ceramics")
 
 ## Drawing and Painting
-Drawing and Painting is using a canvas to draw or paint to express an unlimited amount of style and/or emotion. This trimester, it looks like the students were using aluminum cans to make art. . .
+Drawing and Painting is using a canvas to draw or paint to express an unlimited amount of style and/or emotion. This trimester, it looks like the students were using aluminum cans to make their art pieces. This one is of a bald eagle surrounded by grassland and trees. The aluminum can gives the bald eagle a 3d effect that brings out the bird and makes it stand out from traditional drawings of art.
 
 ![]({{ site.baseurl }}/images/biggestbird.jpg "Picture For Drawing and Painting")
 
