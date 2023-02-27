@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: base
 permalink: /notes/
 title: Notes
 search_exclude: true
