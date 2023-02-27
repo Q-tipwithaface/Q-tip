@@ -60,16 +60,16 @@
 
       console.log(foodimages);
 
-      // var getScores;
-      // fetch(scores_api_url)
-      //    .then(response => response.json())
-      //    // .then(data => console.log(data))
-      //    .then(data => {
-      //       getScores = data;
-      //       })
-      //    .then(() => {
-      //       console.log(getScores);
-      //    });
+      var getScores;
+      fetch(scores_api_url)
+         .then(response => response.json())
+         // .then(data => console.log(data))
+         .then(data => {
+            getScores = data;
+            })
+         .then(() => {
+            console.log(getScores);
+         });
 
 
       function get_images() {
