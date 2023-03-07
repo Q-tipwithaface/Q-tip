@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 description: Blog about the Night At the Museum for Trimester 2
 categories: [markdown, N@TM]
 title: Night At the Museum Trimester 2 Blog

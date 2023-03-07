@@ -17,7 +17,23 @@
 
 
    <script>
-            
+
+      const options = {
+	      method: 'GET',
+      };
+
+      fetch('https://fruitteam.duckdns.org/api/foods/', options)
+	      .then(response => response.json())
+	      .then(response => console.log(response))
+	      .catch(err => console.error(err));
+        
+      // async function loadfood(){
+      //    const food_api_url = 'https://fruitteam.duckdns.org/api/foods/';
+      //    const result = await fetch(`${food_api_url}`);
+      //    const dataaa = await result.json();
+      //    console.log(dataaa)
+      // }
+
       const food_api_url = 'https://fruitteam.duckdns.org/api/foods/';
       const scores_api_url = 'https://fruitteam.duckdns.org/api/topscores/';
 
@@ -60,16 +76,16 @@
 
       console.log(foodimages);
 
-      // var getScores;
-      // fetch(scores_api_url)
-      //    .then(response => response.json())
-      //    // .then(data => console.log(data))
-      //    .then(data => {
-      //       getScores = data;
-      //       })
-      //    .then(() => {
-      //       console.log(getScores);
-      //    });
+      var getScores;
+      fetch(scores_api_url)
+         .then(response => response.json())
+         // .then(data => console.log(data))
+         .then(data => {
+            getScores = data;
+            })
+         .then(() => {
+            console.log(getScores);
+         });
 
 
       function get_images() {
