@@ -14,6 +14,7 @@ title: Tri 2 MCQ Final Blog
 
 ### Question 2
 
+<<<<<<< HEAD
 I chose (B) but the correct answer was (A). The Internet Protocol Address of a user's computer is meant to be public as it allows for other computers to talk and connect with each other. A group of cookies stored by the user's Web browser is the greatest potential for compromising a user's privacy because connecting to websites are not as secure as other places on the internet making it easy for attackers to steal personal data from them. 
 
 ### Question 6
@@ -39,3 +40,16 @@ I chose (A) but the correct answer was (B). The model can be modified just like 
 ### Question 50
 
 I chose (B) and (C) but the correct answers were (A) and (D). Algorithm B and C are incorrect because the number of steps needed as the size of the list increases gets very big because the slope it trying to multiply and raise the power of steps at the same time. This causes a dramatic increase of steps. However, Algorithm A will always have only 10 steps as the list size increases and Algorithm D is only raising the power to its slope and not doing both multiplying and raising the power. This results in less steps meaning that algorithms A and D will run in a reasonable amount of time.
+=======
+### Question 6
+
+### Question 8
+
+### Question 22
+
+### Question 41
+
+### Question 49
+
+### Question 50
+>>>>>>> e0f9cbfc244a26c663136d6ac5c47e6cca849720
