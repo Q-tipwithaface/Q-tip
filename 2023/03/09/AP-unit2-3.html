@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      15 min read
+      16 min read
     
 </span></p>
 
@@ -792,14 +792,27 @@ None
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="c1">#the data can be stored as a python dictionary</span>
+<span class="c1">#the data is stored in a python dictionary</span>
 <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;calories&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">420</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">390</span><span class="p">,</span> <span class="mi">999</span><span class="p">],</span>
-  <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">999</span><span class="p">]</span>
+  <span class="s2">&quot;Audience %&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">59</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">86</span><span class="p">],</span>                     <span class="c1"># Audience Score</span>
+  <span class="s2">&quot;Rotten Tomatoes %&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">51</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">52</span><span class="p">],</span>              <span class="c1"># Rotten Tomatoes Score</span>
+  <span class="s2">&quot;Duration in Minutes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">133</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="mi">142</span><span class="p">],</span>   <span class="c1"># Movie&#39;s Runtime</span>
+  <span class="s2">&quot;money made in millions&quot;</span><span class="p">:[</span><span class="mi">431</span><span class="p">,</span> <span class="mi">302</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">307</span><span class="p">,</span> <span class="mi">209</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mi">936</span><span class="p">,</span> <span class="mi">620</span><span class="p">,</span> <span class="mi">515</span><span class="p">]</span>  <span class="c1"># Money the movie made in the millions</span>
 <span class="p">}</span>
 <span class="c1">#or with the index argument, you can label rows.</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;day1&quot;</span><span class="p">,</span> <span class="s2">&quot;day2&quot;</span><span class="p">,</span> <span class="s2">&quot;day3&quot;</span><span class="p">,</span> <span class="s2">&quot;day4&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Phantom Menace&quot;</span><span class="p">,</span> <span class="s2">&quot;Attack of the Clones&quot;</span><span class="p">,</span> <span class="s2">&quot;Revenge of the Sith&quot;</span><span class="p">,</span> <span class="s2">&quot;A New Hope&quot;</span><span class="p">,</span> <span class="s2">&quot;Empire Strikes Back&quot;</span><span class="p">,</span> <span class="s2">&quot;Return of the Jedi&quot;</span><span class="p">,</span> <span class="s2">&quot;The Force Awakens&quot;</span><span class="p">,</span> <span class="s2">&quot;The Last Jedi&quot;</span><span class="p">,</span> <span class="s2">&quot;The Rise of Skywalker&quot;</span><span class="p">])</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Audience %&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------Highest Audience Rated Moive------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># prints the movie with the highest Audience Score (max)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------Lowest Audience Rated Moive------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># prints the movie with the lowest Audience Score (min)</span>
+
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Audience %&quot;</span><span class="p">])):</span>
+  <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">i</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The average audience rating is&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Audience %&quot;</span><span class="p">]))))</span>
 </pre></div>
 
     </div>
@@ -812,11 +825,20 @@ None
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>      calories  duration
-day1       420        50
-day2       380        40
-day3       390        45
-day4       999       999
+<pre>------------Highest Audience Rated Moive------------
+                     Audience %  Rotten Tomatoes %  Duration in Minutes  \
+Empire Strikes Back          97                 94                  124   
+
+                     money made in millions  
+Empire Strikes Back                     209  
+
+------------Lowest Audience Rated Moive------------
+               Audience %  Rotten Tomatoes %  Duration in Minutes  \
+The Last Jedi          42                 91                  152   
+
+               money made in millions  
+The Last Jedi                     620  
+The average audience rating is 88.88888888888889
 </pre>
 </div>
 </div>
