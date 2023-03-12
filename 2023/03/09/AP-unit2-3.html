@@ -13,14 +13,12 @@
 <link rel="canonical" href="https://q-tipwithaface.github.io/Q-tip/2023/03/09/AP-unit2-3.html" />
 <meta property="og:url" content="https://q-tipwithaface.github.io/Q-tip/2023/03/09/AP-unit2-3.html" />
 <meta property="og:site_name" content="Lucas Pages" />
-<meta property="og:image" content="https://q-tipwithaface.github.io/Q-tip/images/python.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-09T00:00:00-06:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://q-tipwithaface.github.io/Q-tip/images/python.png" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Unit 2.3 Extracting Information from Data, Pandas" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-09T00:00:00-06:00","datePublished":"2023-03-09T00:00:00-06:00","description":"Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics.","headline":"Unit 2.3 Extracting Information from Data, Pandas","image":"https://q-tipwithaface.github.io/Q-tip/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://q-tipwithaface.github.io/Q-tip/2023/03/09/AP-unit2-3.html"},"url":"https://q-tipwithaface.github.io/Q-tip/2023/03/09/AP-unit2-3.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-09T00:00:00-06:00","datePublished":"2023-03-09T00:00:00-06:00","description":"Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics.","headline":"Unit 2.3 Extracting Information from Data, Pandas","mainEntityOfPage":{"@type":"WebPage","@id":"https://q-tipwithaface.github.io/Q-tip/2023/03/09/AP-unit2-3.html"},"url":"https://q-tipwithaface.github.io/Q-tip/2023/03/09/AP-unit2-3.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Q-tip/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://q-tipwithaface.github.io/Q-tip/feed.xml" title="Lucas Pages" /><link rel="shortcut icon" type="image/x-icon" href="/Q-tip/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -81,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      17 min read
+      11 min read
     
 </span></p>
 
@@ -127,6 +125,13 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span style="color:blue">**All the writing in this blog that is BLUE is my notes (besides some links)**</span>.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Pandas-and-DataFrames">Pandas and DataFrames<a class="anchor-link" href="#Pandas-and-DataFrames"> </a></h1><blockquote><p>In this lesson we will be exploring data analysis using Pandas.</p>
@@ -227,6 +232,13 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span style="color:blue">This Dataframe is missing data points, has invalid data, and inaccurate Data. For index 9, the student ID is missing and it labeled 'nil'. In index 4 and 8, the Year in school doesn't match with the format of the other values in Year in School. In index 5, the year in school is 20 but it can only be 9-12.</span></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Extracting-Info">Extracting Info<a class="anchor-link" href="#Extracting-Info"> </a></h1><p>Take a look at some features that the Pandas library has that extracts info from the dataset</p>
@@ -805,9 +817,11 @@ None
 
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Loved by all&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Rotten Tomatoes&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Audience&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">200</span><span class="p">)</span> <span class="c1"># finds the ratings total and divides it by the highest possible rating and *100 to make it a %.</span>
 <span class="n">dfLovedbyAll</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Loved by all&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> <span class="c1"># sets the base list to the variable dfLovedbyAll</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dfLovedbyAll</span><span class="p">)</span> <span class="c1"># prints the data based on % that all rated the moive (Highest to lowest).</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dfLovedbyAll</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># prints the Highest Loved by All %.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dfLovedbyAll</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># prints the Lowest Loved by All %.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfLovedbyAll</span><span class="p">[[</span><span class="s1">&#39;Audience&#39;</span><span class="p">,</span><span class="s1">&#39;Rotten Tomatoes&#39;</span><span class="p">,</span><span class="s1">&#39;Loved by all&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> <span class="c1"># prints the data based on % that all rated the moive (Highest to lowest).</span>
+<span class="nb">print</span><span class="p">()</span> <span class="c1">#spaces out the data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfLovedbyAll</span><span class="p">[[</span><span class="s1">&#39;Audience&#39;</span><span class="p">,</span><span class="s1">&#39;Rotten Tomatoes&#39;</span><span class="p">,</span><span class="s1">&#39;Loved by all&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># prints the Highest Loved by All %.</span>
+<span class="nb">print</span><span class="p">()</span> <span class="c1">#spaces out the data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfLovedbyAll</span><span class="p">[[</span><span class="s1">&#39;Audience&#39;</span><span class="p">,</span><span class="s1">&#39;Rotten Tomatoes&#39;</span><span class="p">,</span><span class="s1">&#39;Loved by all&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># prints the Lowest Loved by All %.</span>
 </pre></div>
 
     </div>
@@ -820,422 +834,22 @@ None
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>                       Audience  Rotten Tomatoes  Duration  \
-Empire Strikes Back          97               94       124   
-A New Hope                   96               93       121   
-The Force Awakens            85               93       136   
-Return of the Jedi           94               83       133   
-Revenge of the Sith          66               79       140   
-The Rise of Skywalker        86               52       142   
-The Last Jedi                42               91       152   
-Attack of the Clones         56               65       143   
-The Phantom Menace           59               51       133   
+<pre>                       Audience  Rotten Tomatoes  Loved by all
+Empire Strikes Back          97               94          95.5
+A New Hope                   96               93          94.5
+The Force Awakens            85               93          89.0
+Return of the Jedi           94               83          88.5
+Revenge of the Sith          66               79          72.5
+The Rise of Skywalker        86               52          69.0
+The Last Jedi                42               91          66.5
+Attack of the Clones         56               65          60.5
+The Phantom Menace           59               51          55.0
 
-                       money made(millions)  Loved by all  
-Empire Strikes Back                     209          95.5  
-A New Hope                              307          94.5  
-The Force Awakens                       936          89.0  
-Return of the Jedi                      252          88.5  
-Revenge of the Sith                     380          72.5  
-The Rise of Skywalker                   515          69.0  
-The Last Jedi                           620          66.5  
-Attack of the Clones                    302          60.5  
-The Phantom Menace                      431          55.0  
-                     Audience  Rotten Tomatoes  Duration  \
-Empire Strikes Back        97               94       124   
+                     Audience  Rotten Tomatoes  Loved by all
+Empire Strikes Back        97               94          95.5
 
-                     money made(millions)  Loved by all  
-Empire Strikes Back                   209          95.5  
-                    Audience  Rotten Tomatoes  Duration  money made(millions)  \
-The Phantom Menace        59               51       133                   431   
-
-                    Loved by all  
-The Phantom Menace          55.0  
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hack-Helpers">Hack Helpers<a class="anchor-link" href="#Hack-Helpers"> </a></h2><blockquote><p>Here is how Mort started on this assignment by asking ChatGPT  ... Regarding Python Pandas, what are some data sets that would be good for learning Pandas?</p>
-</blockquote>
-<ul>
-<li><p>There are many data sets that are suitable for learning pandas, depending on your interests and the skills you want to develop. Here are some suggestions:- Titanic Dataset: This is a classic dataset for data analysis and machine learning, and is often used as an introduction to pandas. The dataset contains information about passengers on the Titanic, including their demographics, ticket class, and survival status.</p>
-<ul>
-<li><p>Iris Dataset: This is another classic dataset that is often used in machine learning and data analysis courses. The dataset contains information about iris flowers, including their sepal length, sepal width, petal length, and petal width.</p>
-</li>
-<li><p>NBA Player Stats: This dataset contains information about NBA players, including their stats for various games, their positions, and their salaries. It is a great dataset for learning how to clean and manipulate data using pandas.</p>
-</li>
-<li><p>Housing Prices Dataset: This dataset contains information about housing prices in a particular city or region, including variables such as the number of bedrooms, square footage, and price. It is a great dataset for learning how to manipulate and analyze numerical data using pandas.</p>
-</li>
-<li><p>COVID-19 Dataset: This dataset contains information about the COVID-19 pandemic, including the number of cases, deaths, and recoveries in various countries and regions. It is a great dataset for learning how to manipulate and analyze time-series data using pandas.</p>
-</li>
-<li><p>World Bank Dataset: This dataset contains information about economic indicators from various countries, such as GDP, population, and poverty rates. It is a great dataset for learning how to manipulate and analyze large datasets using pandas.</p>
-</li>
-</ul>
-</li>
-<li><p>These are just a few examples of the many datasets that are suitable for learning pandas. The best dataset for you will depend on your interests and the specific skills you want to develop.</p>
-<blockquote><p>Follow up question, "where can I find Titanic data set?"</p>
-</blockquote>
-</li>
-<li><p>The Titanic dataset is a popular dataset for data analysis and machine learning, and it can be found on various websites and data repositories. Here are a few places where you can find the Titanic dataset:- Kaggle: The Titanic dataset is available on Kaggle, which is a popular platform for data scientists and machine learning enthusiasts. You can download the dataset from the Kaggle website after creating an account.</p>
-<ul>
-<li><p>UCI Machine Learning Repository: The Titanic dataset is also available on the UCI Machine Learning Repository, which is a collection of datasets that are commonly used for machine learning research. You can download the dataset from the UCI Machine Learning Repository website.</p>
-</li>
-<li><p>Seaborn library: If you have the Seaborn library installed in your Python environment, you can load the Titanic dataset directly from the library using the following code:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="n">titanic_data</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;titanic&#39;</span><span class="p">)</span>
-</pre></div>
-</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Titanic-Data">Titanic Data<a class="anchor-link" href="#Titanic-Data"> </a></h3><blockquote><p>Look at a sample of data.</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="c1"># Load the titanic dataset</span>
-<span class="n">titanic_data</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;titanic&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Titanic Data&quot;</span><span class="p">)</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">titanic_data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="c1"># titanic data set</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">titanic_data</span><span class="p">[[</span><span class="s1">&#39;survived&#39;</span><span class="p">,</span><span class="s1">&#39;pclass&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;sibsp&#39;</span><span class="p">,</span> <span class="s1">&#39;parch&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;fare&#39;</span><span class="p">,</span> <span class="s1">&#39;embark_town&#39;</span><span class="p">]])</span> <span class="c1"># look at selected columns</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Titanic Data
-Index([&#39;survived&#39;, &#39;pclass&#39;, &#39;sex&#39;, &#39;age&#39;, &#39;sibsp&#39;, &#39;parch&#39;, &#39;fare&#39;,
-       &#39;embarked&#39;, &#39;class&#39;, &#39;who&#39;, &#39;adult_male&#39;, &#39;deck&#39;, &#39;embark_town&#39;,
-       &#39;alive&#39;, &#39;alone&#39;],
-      dtype=&#39;object&#39;)
-     survived  pclass     sex   age  sibsp  parch   class     fare  \
-0           0       3    male  22.0      1      0   Third   7.2500   
-1           1       1  female  38.0      1      0   First  71.2833   
-2           1       3  female  26.0      0      0   Third   7.9250   
-3           1       1  female  35.0      1      0   First  53.1000   
-4           0       3    male  35.0      0      0   Third   8.0500   
-..        ...     ...     ...   ...    ...    ...     ...      ...   
-886         0       2    male  27.0      0      0  Second  13.0000   
-887         1       1  female  19.0      0      0   First  30.0000   
-888         0       3  female   NaN      1      2   Third  23.4500   
-889         1       1    male  26.0      0      0   First  30.0000   
-890         0       3    male  32.0      0      0   Third   7.7500   
-
-     embark_town  
-0    Southampton  
-1      Cherbourg  
-2    Southampton  
-3    Southampton  
-4    Southampton  
-..           ...  
-886  Southampton  
-887  Southampton  
-888  Southampton  
-889    Cherbourg  
-890   Queenstown  
-
-[891 rows x 9 columns]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Use Pandas to clean the data.  Most analysis, like Machine Learning or even Pandas in general like data to be in standardized format.  This is called 'Training' or 'Cleaning' data.</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Preprocess the data</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
-
-
-<span class="n">td</span> <span class="o">=</span> <span class="n">titanic_data</span>
-<span class="n">td</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;alive&#39;</span><span class="p">,</span> <span class="s1">&#39;who&#39;</span><span class="p">,</span> <span class="s1">&#39;adult_male&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;embark_town&#39;</span><span class="p">,</span> <span class="s1">&#39;deck&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">td</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">td</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">td</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;male&#39;</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">td</span><span class="p">[</span><span class="s1">&#39;alone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">td</span><span class="p">[</span><span class="s1">&#39;alone&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="kc">True</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Encode categorical variables</span>
-<span class="n">enc</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
-<span class="n">enc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">td</span><span class="p">[[</span><span class="s1">&#39;embarked&#39;</span><span class="p">]])</span>
-<span class="n">onehot</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">td</span><span class="p">[[</span><span class="s1">&#39;embarked&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
-<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;embarked_&#39;</span> <span class="o">+</span> <span class="n">val</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">enc</span><span class="o">.</span><span class="n">categories_</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-<span class="n">td</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">onehot</span><span class="p">)</span>
-<span class="n">td</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;embarked&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">td</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">td</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>     survived  pclass  sex   age  sibsp  parch      fare  alone  embarked_C  \
-0           0       3    1  22.0      1      0    7.2500      0         0.0   
-1           1       1    0  38.0      1      0   71.2833      0         1.0   
-2           1       3    0  26.0      0      0    7.9250      1         0.0   
-3           1       1    0  35.0      1      0   53.1000      0         0.0   
-4           0       3    1  35.0      0      0    8.0500      1         0.0   
-..        ...     ...  ...   ...    ...    ...       ...    ...         ...   
-705         0       2    1  39.0      0      0   26.0000      1         0.0   
-706         1       2    0  45.0      0      0   13.5000      1         0.0   
-707         1       1    1  42.0      0      0   26.2875      1         0.0   
-708         1       1    0  22.0      0      0  151.5500      1         0.0   
-710         1       1    0  24.0      0      0   49.5042      1         1.0   
-
-     embarked_Q  embarked_S  
-0           0.0         1.0  
-1           0.0         0.0  
-2           0.0         1.0  
-3           0.0         1.0  
-4           0.0         1.0  
-..          ...         ...  
-705         0.0         1.0  
-706         0.0         1.0  
-707         1.0         0.0  
-708         0.0         1.0  
-710         0.0         0.0  
-
-[564 rows x 11 columns]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>The result of 'Training' data is making it easier to analyze or make conclusions.  In looking at the Titanic, as you clean you would probably want to make assumptions on likely chance of survival.</p>
-</blockquote>
-<p>This would involve analyzing various factors (such as age, gender, class, etc.) that may have affected a person's chances of survival, and using that information to make predictions about whether an individual would have survived or not.</p>
-<ul>
-<li><p>Data description:- Survival - Survival (0 = No; 1 = Yes). Not included in test.csv file.    - Pclass - Passenger Class (1 = 1st; 2 = 2nd; 3 = 3rd)</p>
-<ul>
-<li>Name - Name</li>
-<li>Sex - Sex</li>
-<li>Age - Age</li>
-<li>Sibsp - Number of Siblings/Spouses Aboard</li>
-<li>Parch - Number of Parents/Children Aboard</li>
-<li>Ticket - Ticket Number</li>
-<li>Fare - Passenger Fare</li>
-<li>Cabin - Cabin</li>
-<li>Embarked - Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton)</li>
-</ul>
-</li>
-<li><p>Perished Mean/Average</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">titanic_data</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;survived == 0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>survived       0.000000
-pclass         2.464072
-sex            0.844311
-age           31.073353
-sibsp          0.562874
-parch          0.398204
-fare          24.835902
-alone          0.616766
-embarked_C     0.185629
-embarked_Q     0.038922
-embarked_S     0.775449
-dtype: float64
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Survived Mean/Average</li>
-</ul>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">td</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;survived == 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>survived       1.000000
-pclass         1.878261
-sex            0.326087
-age           28.481522
-sibsp          0.504348
-parch          0.508696
-fare          50.188806
-alone          0.456522
-embarked_C     0.152174
-embarked_Q     0.034783
-embarked_S     0.813043
-dtype: float64
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Survived Max and Min Stats</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">td</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;survived == 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">td</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;survived == 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>survived        1.0000
-pclass          3.0000
-sex             1.0000
-age            80.0000
-sibsp           4.0000
-parch           5.0000
-fare          512.3292
-alone           1.0000
-embarked_C      1.0000
-embarked_Q      1.0000
-embarked_S      1.0000
-dtype: float64
-survived      1.00
-pclass        1.00
-sex           0.00
-age           0.75
-sibsp         0.00
-parch         0.00
-fare          0.00
-alone         0.00
-embarked_C    0.00
-embarked_Q    0.00
-embarked_S    0.00
-dtype: float64
+                    Audience  Rotten Tomatoes  Loved by all
+The Phantom Menace        59               51          55.0
 </pre>
 </div>
 </div>
