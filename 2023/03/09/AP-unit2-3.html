@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 2.3 Extracting Information from Data, Pandas | Lucas Pages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 2.3 Extracting Information from Data, Pandas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics." />
+<meta property="og:description" content="Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics." />
+<link rel="canonical" href="https://q-tipwithaface.github.io/Q-tip/2023/03/09/AP-unit2-3.html" />
+<meta property="og:url" content="https://q-tipwithaface.github.io/Q-tip/2023/03/09/AP-unit2-3.html" />
+<meta property="og:site_name" content="Lucas Pages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-09T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unit 2.3 Extracting Information from Data, Pandas" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-09T00:00:00-06:00","datePublished":"2023-03-09T00:00:00-06:00","description":"Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics.","headline":"Unit 2.3 Extracting Information from Data, Pandas","mainEntityOfPage":{"@type":"WebPage","@id":"https://q-tipwithaface.github.io/Q-tip/2023/03/09/AP-unit2-3.html"},"url":"https://q-tipwithaface.github.io/Q-tip/2023/03/09/AP-unit2-3.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Q-tip/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://q-tipwithaface.github.io/Q-tip/feed.xml" title="Lucas Pages" /><link rel="shortcut icon" type="image/x-icon" href="/Q-tip/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Q-tip/">Lucas Pages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Q-tip/_pages/00_Schedule.html">Schedule</a><a class="page-link" href="/Q-tip/API/">API</a><a class="page-link" href="/Q-tip/Collegeboard/">Collegeboard</a><a class="page-link" href="/Q-tip/Javascript/">Javascript</a><a class="page-link" href="/Q-tip/about/">About Me</a><a class="page-link" href="/Q-tip/notes/">Notes</a><a class="page-link" href="/Q-tip/search/">Search</a><a class="page-link" href="/Q-tip/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 2.3 Extracting Information from Data, Pandas</h1><p class="page-description">Data connections, trends, and correlation.  Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-09T00:00:00-06:00" itemprop="datePublished">
+        Mar 9, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      8 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Q-tipwithaface/Q-tip/tree/master/_notebooks/2023-03-09-AP-unit2-3.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Q-tip/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Q-tipwithaface/Q-tip/master?filepath=_notebooks%2F2023-03-09-AP-unit2-3.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Q-tip/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Q-tipwithaface/Q-tip/blob/master/_notebooks/2023-03-09-AP-unit2-3.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Q-tip/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FQ-tipwithaface%2FQ-tip%2Fblob%2Fmaster%2F_notebooks%2F2023-03-09-AP-unit2-3.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/Q-tip/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-09-AP-unit2-3.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span style="color:blue">**All the writing in this blog that is BLUE is my notes (besides some links)**</span>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Pandas-and-DataFrames">Pandas and DataFrames<a class="anchor-link" href="#Pandas-and-DataFrames"> </a></h1><blockquote><p>In this lesson we will be exploring data analysis using Pandas.</p>
+</blockquote>
+<ul>
+<li>College Board talks about ideas like <ul>
+<li>Tools. "the ability to process data depends on users capabilities and their tools"</li>
+<li>Combining Data.  "combine county data sets"</li>
+<li>Status on Data"determining the artist with the greatest attendance during a particular month"</li>
+<li>Data poses challenge. "the need to clean data", "incomplete data"</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://pandas.pydata.org/docs/getting_started/index.html">From Pandas Overview</a> -- When working with tabular data, such as data stored in spreadsheets or databases, pandas is the right tool for you. pandas will help you to explore, clean, and process your data. In pandas, a data table is called a DataFrame.</li>
+</ul>
+<p><img src="/Q-tip/images/copied_from_nb/images/table_dataframe.png" alt="DataFrame" /></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;Pandas is used to gather data sets through its DataFrames implementation&#39;&#39;&#39;</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Cleaning-Data">Cleaning Data<a class="anchor-link" href="#Cleaning-Data"> </a></h1><p>When looking at a data set, check to see what data needs to be cleaned. Examples include:</p>
+<ul>
+<li>Missing Data Points</li>
+<li>Invalid Data</li>
+<li>Inaccurate Data</li>
+</ul>
+<p>Run the following code to see what needs to be cleaned</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;files/grade.json&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="c1"># What part of the data set needs to be cleaned?</span>
+<span class="c1"># From PBL learning, what is a good time to clean data?  Hint, remember Garbage in, Garbage out?</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   Student ID Year in School   GPA
+0         123             12  3.57
+1         246             10  4.00
+2         578             12  2.78
+3         469             11  3.45
+4         324         Junior  4.75
+5         313             20  3.33
+6         145             12  2.95
+7         167             10  3.90
+8         235      9th Grade  3.15
+9         nil              9  2.80
+10        469             11  3.45
+11        456             10  2.75
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span style="color:blue">This Dataframe is missing data points, has invalid data, and inaccurate Data. For index 9, the student ID is missing and it labeled 'nil'. In index 4 and 8, the Year in school doesn't match with the format of the other values in Year in School. In index 5, the year in school is 20 but it can only be 9-12.</span></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Extracting-Info">Extracting Info<a class="anchor-link" href="#Extracting-Info"> </a></h1><p>Take a look at some features that the Pandas library has that extracts info from the dataset</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="DataFrame-Extract-Column">DataFrame Extract Column<a class="anchor-link" href="#DataFrame-Extract-Column"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;GPA&#39;</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1">#try two columns and remove the index from print statement</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Student ID&#39;</span><span class="p">,</span><span class="s1">&#39;GPA&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     GPA
+0   3.57
+1   4.00
+2   2.78
+3   3.45
+4   4.75
+5   3.33
+6   2.95
+7   3.90
+8   3.15
+9   2.80
+10  3.45
+11  2.75
+
+Student ID  GPA
+       123 3.57
+       246 4.00
+       578 2.78
+       469 3.45
+       324 4.75
+       313 3.33
+       145 2.95
+       167 3.90
+       235 3.15
+       nil 2.80
+       469 3.45
+       456 2.75
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="DataFrame-Sort">DataFrame Sort<a class="anchor-link" href="#DataFrame-Sort"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GPA&#39;</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1">#sort the values in reverse order</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GPA&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   Student ID Year in School   GPA
+11        456             10  2.75
+2         578             12  2.78
+9         nil              9  2.80
+6         145             12  2.95
+8         235      9th Grade  3.15
+5         313             20  3.33
+3         469             11  3.45
+10        469             11  3.45
+0         123             12  3.57
+7         167             10  3.90
+1         246             10  4.00
+4         324         Junior  4.75
+
+   Student ID Year in School   GPA
+4         324         Junior  4.75
+1         246             10  4.00
+7         167             10  3.90
+0         123             12  3.57
+3         469             11  3.45
+10        469             11  3.45
+5         313             20  3.33
+8         235      9th Grade  3.15
+6         145             12  2.95
+9         nil              9  2.80
+2         578             12  2.78
+11        456             10  2.75
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="DataFrame-Selection-or-Filter">DataFrame Selection or Filter<a class="anchor-link" href="#DataFrame-Selection-or-Filter"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">GPA</span> <span class="o">&gt;</span> <span class="mf">3.00</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   Student ID Year in School   GPA
+0         123             12  3.57
+1         246             10  4.00
+3         469             11  3.45
+4         324         Junior  4.75
+5         313             20  3.33
+7         167             10  3.90
+8         235      9th Grade  3.15
+10        469             11  3.45
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="DataFrame-Selection-Max-and-Min">DataFrame Selection Max and Min<a class="anchor-link" href="#DataFrame-Selection-Max-and-Min"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">GPA</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">GPA</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">GPA</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">GPA</span><span class="o">.</span><span class="n">min</span><span class="p">()])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  Student ID Year in School   GPA
+4        324         Junior  4.75
+
+   Student ID Year in School   GPA
+11        456             10  2.75
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Create-your-own-DataFrame">Create your own DataFrame<a class="anchor-link" href="#Create-your-own-DataFrame"> </a></h1><p>Using Pandas allows you to create your own DataFrame in Python.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python-Dictionary-to-Pandas-DataFrame">Python Dictionary to Pandas DataFrame<a class="anchor-link" href="#Python-Dictionary-to-Pandas-DataFrame"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1">#the data can be stored as a python dictionary</span>
+<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;calories&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">420</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">390</span><span class="p">,</span> <span class="mi">999</span><span class="p">],</span>
+  <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">999</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="c1">#stores the data in a data frame</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-------------Dict_to_DF------------------&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----------Dict_to_DF_labels--------------&quot;</span><span class="p">)</span>
+
+<span class="c1">#or with the index argument, you can label rows.</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;day1&quot;</span><span class="p">,</span> <span class="s2">&quot;day2&quot;</span><span class="p">,</span> <span class="s2">&quot;day3&quot;</span><span class="p">,</span> <span class="s2">&quot;day4&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-------------Dict_to_DF------------------
+   calories  duration
+0       420        50
+1       380        40
+2       390        45
+3       999       999
+----------Dict_to_DF_labels--------------
+      calories  duration
+day1       420        50
+day2       380        40
+day3       390        45
+day4       999       999
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Examine-DataFrame-Rows">Examine DataFrame Rows<a class="anchor-link" href="#Examine-DataFrame-Rows"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-------Examine Selected Rows---------&quot;</span><span class="p">)</span>
+<span class="c1">#use a list for multiple labels:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s2">&quot;day1&quot;</span><span class="p">,</span> <span class="s2">&quot;day3&quot;</span><span class="p">]])</span>
+
+<span class="c1">#refer to the row index:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------Examine Single Row-----------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;day1&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-------Examine Selected Rows---------
+      calories  duration
+day1       420        50
+day3       390        45
+--------Examine Single Row-----------
+calories    420
+duration     50
+Name: day1, dtype: int64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pandas-DataFrame-Information">Pandas DataFrame Information<a class="anchor-link" href="#Pandas-DataFrame-Information"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 4 entries, day1 to day4
+Data columns (total 2 columns):
+ #   Column    Non-Null Count  Dtype
+---  ------    --------------  -----
+ 0   calories  4 non-null      int64
+ 1   duration  4 non-null      int64
+dtypes: int64(2)
+memory usage: 268.0+ bytes
+None
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Example-of-larger-data-set">Example of larger data set<a class="anchor-link" href="#Example-of-larger-data-set"> </a></h1><p>Pandas can read CSV and many other types of files, run the following code to see more features with a larger data set</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1">#read csv and sort &#39;Duration&#39; largest to smallest</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;files/data.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Duration&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--Duration Top 10---------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--Duration Bottom 10------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>--Duration Top 10---------
+     Duration  Pulse  Maxpulse  Calories
+69        300    108       143    1500.2
+79        270    100       131    1729.0
+109       210    137       184    1860.4
+60        210    108       160    1376.0
+106       180     90       120     800.3
+90        180    101       127     600.1
+65        180     90       130     800.4
+61        160    110       137    1034.4
+62        160    109       135     853.0
+67        150    107       130     816.0
+--Duration Bottom 10------
+     Duration  Pulse  Maxpulse  Calories
+68         20    106       136     110.4
+100        20     95       112      77.7
+89         20     83       107      50.3
+135        20    136       156     189.0
+94         20    150       171     127.4
+95         20    151       168     229.4
+139        20    141       162     222.4
+64         20    110       130     131.4
+112        15    124       139     124.2
+93         15     80       100      50.5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="APIs-are-a-Source-for-Writing-Programs-with-Data">APIs are a Source for Writing Programs with Data<a class="anchor-link" href="#APIs-are-a-Source-for-Writing-Programs-with-Data"> </a></h1><blockquote><p>3rd Party APIs are a great source for creating Pandas Data Frames.</p>
+<ul>
+<li>Data can be fetched and resulting json can be placed into a Data Frame</li>
+<li>Observe output, this looks very similar to a Database</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;Pandas can be used to analyze data&#39;&#39;&#39;</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">def</span> <span class="nf">fetch</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;Obtain data from an endpoint&#39;&#39;&#39;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://flask.nighthawkcodingsociety.com/api/covid/&quot;</span>
+    <span class="n">fetch</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">json</span> <span class="o">=</span> <span class="n">fetch</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="c1"># filter data for requirement</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">json</span><span class="p">[</span><span class="s1">&#39;countries_stat&#39;</span><span class="p">])</span>  <span class="c1"># filter endpoint for country stats</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;country_name&#39;</span><span class="p">:</span><span class="s1">&#39;deaths&#39;</span><span class="p">])</span> <span class="c1"># show row 0 through 5 and columns country_name through deaths</span>
+    
+<span class="n">fetch</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  country_name       cases     deaths
+0          USA  82,649,779  1,018,316
+1        India  43,057,545    522,193
+2       Brazil  30,345,654    662,663
+3       France  28,244,977    145,020
+4      Germany  24,109,433    134,624
+5           UK  21,933,206    173,352
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Does it have a good sample size?</li>
+</ul>
+<p><span style="color:blue">The sample size is 9 but is consided a good sample of the code because it uses ALL the 9 episodes of star wars to determine which episode was the most loved and most hated. Doesn't including another other movies and doesn't excluded any of the episodes.</span></p>
+<ul>
+<li>Is there bias in the data?</li>
+</ul>
+<p><span style="color:blue">Most of the values in the subcategories are determined by how much people liked or disliked a given star wars movie, which involves personal bias. However, the computer doesn't have bias because it is using correct and clean data and is not including and/or excluded pieces of infomation when running.</span></p>
+<ul>
+<li>Does the data set need to be cleaned?</li>
+</ul>
+<p><span style="color:blue">The data set below doesn't need to be cleaned. It was created with the intent to have clean and correct data.</span></p>
+<ul>
+<li>What is the purpose of the data set?</li>
+</ul>
+<p><span style="color:blue">The purpose of the data set is to find out which star wars movie is loved the most and loved the least by both Audience score and Rotten Tomatoes. It is to help people know what both parties think of a moive and determine which one is favored by both parties.</span></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1">#the data is stored in a python dictionary</span>
+<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;Audience&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">59</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">86</span><span class="p">],</span>                     <span class="c1"># Audience Score</span>
+  <span class="s2">&quot;Rotten Tomatoes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">51</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">52</span><span class="p">],</span>              <span class="c1"># Rotten Tomatoes Score</span>
+  <span class="s2">&quot;Duration&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">133</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="mi">142</span><span class="p">],</span>            <span class="c1"># Movie&#39;s Runtime</span>
+  <span class="s2">&quot;money made(millions)&quot;</span><span class="p">:[</span><span class="mi">431</span><span class="p">,</span> <span class="mi">302</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">307</span><span class="p">,</span> <span class="mi">209</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mi">936</span><span class="p">,</span> <span class="mi">620</span><span class="p">,</span> <span class="mi">515</span><span class="p">]</span>  <span class="c1"># Money the movie made in the millions</span>
+<span class="p">}</span>
+<span class="c1">#or with the index argument, you can label rows.</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Phantom Menace&quot;</span><span class="p">,</span> <span class="s2">&quot;Attack of the Clones&quot;</span><span class="p">,</span> <span class="s2">&quot;Revenge of the Sith&quot;</span><span class="p">,</span> <span class="s2">&quot;A New Hope&quot;</span><span class="p">,</span> <span class="s2">&quot;Empire Strikes Back&quot;</span><span class="p">,</span> <span class="s2">&quot;Return of the Jedi&quot;</span><span class="p">,</span> <span class="s2">&quot;The Force Awakens&quot;</span><span class="p">,</span> <span class="s2">&quot;The Last Jedi&quot;</span><span class="p">,</span> <span class="s2">&quot;The Rise of Skywalker&quot;</span><span class="p">])</span>
+
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Loved by all&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Rotten Tomatoes&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Audience&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">200</span><span class="p">)</span> <span class="c1"># finds the ratings total and divides it by the highest possible rating and *100 to make it a %.</span>
+<span class="n">dfLovedbyAll</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Loved by all&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> <span class="c1"># sets the base list to the variable dfLovedbyAll</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfLovedbyAll</span><span class="p">[[</span><span class="s1">&#39;Audience&#39;</span><span class="p">,</span><span class="s1">&#39;Rotten Tomatoes&#39;</span><span class="p">,</span><span class="s1">&#39;Loved by all&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> <span class="c1"># prints the data based on % that all rated the moive (Highest to lowest).</span>
+<span class="nb">print</span><span class="p">()</span> <span class="c1">#spaces out the data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfLovedbyAll</span><span class="p">[[</span><span class="s1">&#39;Audience&#39;</span><span class="p">,</span><span class="s1">&#39;Rotten Tomatoes&#39;</span><span class="p">,</span><span class="s1">&#39;Loved by all&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># prints the Highest Loved by All %.</span>
+<span class="nb">print</span><span class="p">()</span> <span class="c1">#spaces out the data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfLovedbyAll</span><span class="p">[[</span><span class="s1">&#39;Audience&#39;</span><span class="p">,</span><span class="s1">&#39;Rotten Tomatoes&#39;</span><span class="p">,</span><span class="s1">&#39;Loved by all&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># prints the Lowest Loved by All %.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                       Audience  Rotten Tomatoes  Loved by all
+Empire Strikes Back          97               94          95.5
+A New Hope                   96               93          94.5
+The Force Awakens            85               93          89.0
+Return of the Jedi           94               83          88.5
+Revenge of the Sith          66               79          72.5
+The Rise of Skywalker        86               52          69.0
+The Last Jedi                42               91          66.5
+Attack of the Clones         56               65          60.5
+The Phantom Menace           59               51          55.0
+
+                     Audience  Rotten Tomatoes  Loved by all
+Empire Strikes Back        97               94          95.5
+
+                    Audience  Rotten Tomatoes  Loved by all
+The Phantom Menace        59               51          55.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/Q-tip/2023/03/09/AP-unit2-3.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Q-tip/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://q-tipwithaface.github.io/Q-tip/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Q-tip/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A Web page used by Lucas for High School</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
