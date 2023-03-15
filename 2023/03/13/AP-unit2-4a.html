@@ -559,10 +559,18 @@ Created new uid raven
 <blockquote>
 <p>Uses SQLALchemy and custom user.create() method to add row.</p>
 </blockquote>
-<p>Purpose of the following:<span style="color:blue"> **1. user.find_by_uid() and try/except:** user.find_by_uid is used to set the result of the function "find_by_uid" to the new user variable. "find_by_uid" returns user and it set to the user variable that it outside the function. Try/expect first tries to do something in the try section but if that section of code results in an error, the expect section is ran.</span>
-<span style="color:blue"> **2. user = User(...):** user = User(...) sets user to have the attributes of an object created by the class User.</span></p>
+<p>Purpose of the following:- <span style="color:blue"> **1. user.find_by_uid() and try/except:** user.find_by_uid is used to set the result of the function "find_by_uid" to the new user variable. "find_by_uid" returns user and it set to the user variable that it outside the function. Try/expect first tries to do something in the try section but if that section of code results in an error, the expect section is ran.</span></p>
+<ul>
+<li>
+<p><span style="color:blue"> **2. user = User(...):** user = User(...) sets user to have the attributes of an object created by the class User.</span></p>
+</li>
+<li>
 <p><span style="color:blue"> **3. user.dob and try/except:** user.dob is used in order to be set to a date of one of the user's birthday. Try/expect first tries to do something in the try section but if that section of code results in an error, the expect section is ran. In this case, the expect section runs if a date of birth is not a real date or if it is none.</span></p>
+</li>
+<li>
 <p><span style="color:blue"> **4. user.create() and try/except:** used to add a new user id and all the other attributes of user. Try/expect first tries to do something in the try section but if that section of code results in an error, the expect section is ran. In this case, the expect section runs if the program doeesn't know what the uid is.</span></p>
+</li>
+</ul>
 
 </div>
 </div>
