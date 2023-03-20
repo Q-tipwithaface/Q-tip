@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -129,6 +129,8 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#Read">Read </a></li>
+<li class="toc-entry toc-h3"><a href="#Create">Create </a></li>
 <li class="toc-entry toc-h3"><a href="#Update">Update </a></li>
 <li class="toc-entry toc-h3"><a href="#Delete">Delete </a></li>
 </ul>
@@ -847,6 +849,93 @@ Records exist uid raven, or error.
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Records exist, duplicate, or error: </span><span class="si">{</span><span class="n">food</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
                 
 <span class="n">initfooditem</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Read">
+<a class="anchor" href="#Read" aria-hidden="true"><span class="octicon octicon-link"></span></a>Read<a class="anchor-link" href="#Read"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">food</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">food</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">food</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">json_ready</span>
+
+<span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create">
+<a class="anchor" href="#Create" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create<a class="anchor-link" href="#Create"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">locateitem</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="n">food</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">item</span>
+
+<span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter name of item"</span><span class="p">)</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="n">locateitem</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">return</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+    
+    <span class="n">points</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter points value"</span><span class="p">)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter link of image"</span><span class="p">)</span>
+    
+    <span class="n">user</span> <span class="o">=</span> <span class="n">food</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> 
+                <span class="n">points</span><span class="o">=</span><span class="n">points</span><span class="p">,</span> 
+                <span class="n">image</span><span class="o">=</span><span class="n">image</span>
+                <span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">newitem</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">newitem</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Unknown error uid </span><span class="si">{uid}</span><span class="s2">"</span><span class="p">)</span>
+        
+<span class="n">create</span><span class="p">()</span>
 </pre></div>
 
     </div>
