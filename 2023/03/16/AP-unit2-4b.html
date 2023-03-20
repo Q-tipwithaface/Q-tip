@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -253,19 +253,19 @@ window.onload = wrap_img;
 <ul>
 <li>What is a connection object?  After you google it, what do you think it does?</li>
 </ul>
-<p><span style="color:blue">A connection object is a uniques session for a database. I think it is used to record pieces of data in its own database</span></p>
+<p><span style="color:blue">A connection object is a uniques session for a database. I think it is used to record pieces of data in its own database.</span></p>
 <ul>
 <li>Same for cursor object?</li>
 </ul>
-<p><span style="color:blue">A cursor object is used to </span></p>
+<p><span style="color:blue">A cursor object is used to set different objects in rows or under categories of a table.</span></p>
 <ul>
-<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?</li>
+<li>Look at connect object and cursor object in VSCode debugger.  What attributes are in the object?</li>
 </ul>
-<p><span style="color:blue"></span></p>
+<p><span style="color:blue">The attributes of the objects inform the reader of the status of a database and the objects and properties inside of it.</span></p>
 <ul>
 <li>Is "results" an object?  How do you know?</li>
 </ul>
-<p><span style="color:blue">Results is an object because it ends up with data.</span></p>
+<p><span style="color:blue">Results is an object because it ends up with data and displaying it.</span></p>
 
 </div>
 </div>
@@ -341,9 +341,13 @@ window.onload = wrap_img;
 <p>Uses SQL INSERT to add row</p>
 <ul>
 <li>Compore create() in both SQL lessons.  What is better or worse in the two implementations?</li>
-<li>Explain purpose of SQL INSERT.   Is this the same as User <strong>init</strong>?</li>
 </ul>
 </blockquote>
+<p><span style="color:blue">Both versions do the same thing but this example might be better because it is better at dealing with errors with its try/except statement. This results in the database having clearer data.</span></p>
+<ul>
+<li>Explain purpose of SQL INSERT.   Is this the same as User <strong>init</strong>?</li>
+</ul>
+<p><span style="color:blue">The purpose of SQL INSERT is to add new data items into a database. This is very similar to init because both involve assigning new variables.</span></p>
 
 </div>
 </div>
@@ -409,8 +413,7 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Updating-a-User-in-table-in-Sqlite.db">
 <a class="anchor" href="#Updating-a-User-in-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Updating a User in table in Sqlite.db<a class="anchor-link" href="#Updating-a-User-in-table-in-Sqlite.db"> </a>
@@ -421,17 +424,19 @@ window.onload = wrap_img;
 <li>What does the hacked part do?</li>
 </ul>
 </blockquote>
+<p><span style="color:blue">The hacked part is used to tell the user that their password was not good enough and would result in them easily getting hacked by an online attacker.</span></p>
 <ul>
 <li>Explain try/except, when would except occur?</li>
 </ul>
-<p>Try / Except:Try/expect first tries to do something in the try section but if that section of code results in an error, the expect section is ran.</p>
+<p><span style="color:blue">Try / Except: Try/expect first tries to do something in the try section but if that section of code results in an error, the expect section is ran.</span></p>
 <ul>
 <li>What code seems to be repeated in each of these examples to point, why is it repeated?</li>
 </ul>
+<p><span style="color:blue"> The code repeated on the dot are some of the last two lines, cursor.close() and conn.close(). These are used to close the server session because the action is now complete and the session has no more use because the code can open it again later if needed.&lt;/p&gt;
 
-</div>
-</div>
-</div>
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -493,9 +498,13 @@ window.onload = wrap_img;
 <p>Uses a delete function to remove a user based on a user input of the id.</p>
 <ul>
 <li>Is DELETE a dangerous operation?  Why?</li>
-<li>In the print statemements, what is the "f" and what does {uid} do?</li>
 </ul>
 </blockquote>
+<p><span style="color:blue">DELETE is a dangerous operation because it can permanently remove data that could have been useful and/or needed.</span></p>
+<ul>
+<li>In the print statemements, what is the "f" and what does {uid} do?</li>
+</ul>
+<p><span style="color:blue"> "f" is used to format the following in the print statement into a string. {uid} is used to display the string of the uid that was inserted.</span></p>
 
 </div>
 </div>
@@ -534,7 +543,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="c1">#delete()</span>
+<span class="n">delete</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -554,9 +563,13 @@ window.onload = wrap_img;
 <p>CRUD and Schema interactions from one location by running menu. Observe input at the top of VSCode, observe output underneath code cell.</p>
 <ul>
 <li>Why does the menu repeat?</li>
-<li>Could you refactor this menu?  Make it work with a List?</li>
 </ul>
 </blockquote>
+<p><span style="color:blue">The menu repeats to constantly show the programmer that all the operations are running. If they are not, the code with stop running and will tell the user to run all the functions written before it.</span></p>
+<ul>
+<li>Could you refactor this menu?  Make it work with a List?</li>
+</ul>
+<p><span style="color:blue">This menu can be formated to make it work as a list because it will still use if,elif,else statements to determine what to make of the characters in the list.</span></p>
 
 </div>
 </div>
@@ -627,21 +640,29 @@ window.onload = wrap_img;
 <a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
 </h1>
 <ul>
-<li>Add this Blog to you own Blogging site.  In the Blog add notes and observations on each code cell.</li>
 <li>In this implementation, do you see procedural abstraction?</li>
-<li>In 2.4a or 2.4b lecture<ul>
-<li>Do you see data abstraction?  Complement this with Debugging example.</li>
-<li>Use Imperative or OOP style to Create a new Table or do something that applies to your CPT project.</li>
 </ul>
-</li>
+<p><span style="color:blue">Procedural abstaraction is not present in this implementation because none of the functions used in the code set parameters and the actions inside of the functions only use if,elif,else statements when dealing with fixed or previously set up variables/values.</span></p>
+<p>In 2.4a or 2.4b lecture</p>
+<ul>
+<li>Do you see data abstraction?  Complement this with Debugging example.</li>
+</ul>
+<p><span style="color:blue">Data abstraction is present in the creation of these tables. The data can be shown using debugging.</span></p>
+<ul>
+<li>Use Imperative or OOP style to Create a new Table or do something that applies to your CPT project.</li>
 </ul>
 <p>Reference... <a href="https://www.sqlitetutorial.net/sqlite-python/creating-tables/">sqlite documentation</a></p>
 
 </div>
 </div>
 </div>
-</div>
+&lt;/div&gt;
+ 
 
+</span></p>
+</div>
+</div></div>
+</div>
 
 
   </div><a class="u-url" href="/Q-tip/2023/03/16/AP-unit2-4b.html" hidden></a>
