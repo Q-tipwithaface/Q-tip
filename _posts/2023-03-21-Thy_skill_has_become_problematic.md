@@ -55,6 +55,12 @@
          "image": "https://thumbs.dreamstime.com/b/french-fries-cartoon-clipart-red-paper-box-carton-121897301.jpg", 
          "name": "Fries", 
          "points": "20"
+      },
+      {
+         "id": 3, 
+         "image": "http://clipart-library.com/images/rijrdMBjT.png", 
+         "name": "Flash", 
+         "points": "0"
       }
       ];
 
@@ -81,14 +87,14 @@
 
          // set image
          document.getElementById("test1").src = foodimages[0].image;
-         document.getElementById("test2").src = foodimages[1].image;
+         document.getElementById("test2").src = foodimages[2].image;
          document.getElementById("test3").src = foodimages[1].image;
          document.getElementById("test4").src = foodimages[1].image;
          document.getElementById("test5").src = foodimages[1].image;
    
          // set points
          document.getElementById("test1").points = parseInt(foodimages[0].points);
-         document.getElementById("test2").points = parseInt(foodimages[1].points);
+         document.getElementById("test2").points = parseInt(foodimages[2].points);
          document.getElementById("test3").points = parseInt(foodimages[1].points);
          document.getElementById("test4").points = parseInt(foodimages[1].points);
          document.getElementById("test5").points = parseInt(foodimages[1].points);
