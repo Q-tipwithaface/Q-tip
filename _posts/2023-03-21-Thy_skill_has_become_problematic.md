@@ -1,5 +1,3 @@
-{% include Submenu.html %}
-<html lang="en-US">
 <head>
    <style> 
       input[type='Image'] { position: absolute; }
@@ -191,19 +189,3 @@
 
    </script>
 </body>
-      <div class="wrapper">
-
-<!-- <section> -->
-        <!-- nighthawk coding society has altered arrangement and inserted navigation that is updated in independent file -->
-<!-- <div id="title">
-  <table>
-    <tr>
-      <td><a href="/">Home</a></td>
-      <td><a href="/housing">Housing</a></td>
-      <td><a href="/food">Food</a></td>
-      <td><a href="/activities">Activities</a></td>
-      <td><a href="/family-night">Family-Night</a></td>
-      <td><a href="/gallery">Gallery</a></td>
-    </tr>
-  </table>
-</div> -->
