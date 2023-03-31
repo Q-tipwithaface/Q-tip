@@ -14,8 +14,16 @@ title: Big Idea 4 Quiz Blog
 
 ### Question 6
 
+![]({{ site.baseurl }}/images/problem6missedtest4.png "Problem 6")
+
 ### Question 20
+
+![]({{ site.baseurl }}/images/problem20missedtest4.png "Problem 20")
 
 ### Question 37
 
+![]({{ site.baseurl }}/images/problem37missedtest4.png "Problem 37")
+
 ### Question 49
+
+![]({{ site.baseurl }}/images/problem49missedtest4.png "Problem 49")
