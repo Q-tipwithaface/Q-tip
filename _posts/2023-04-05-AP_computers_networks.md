@@ -21,15 +21,15 @@ List specification of your Computer, or Computers if working as Pair/Trio
 - OS: <span style="color:blue">Microsoft Windows 11 Home</span>
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
-- Input devices
-- Output devices
-- Program File
-- Program Code
-- Processes
-- Ports
-- Data File
-- Inspect Running Code
-- Inspect Variables
+- Input devices: <span style="color:blue">Monitor</span>
+- Output devices: <span style="color:blue">Keyboard</span>
+- Program File:
+- Program Code:
+- Processes:
+- Ports:
+- Data File:
+- Inspect Running Code:
+- Inspect Variables:
 
 
 ![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
@@ -49,12 +49,12 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - Bandwidth is usually measured in bits per second
 
 - Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use `traceroute` and `ping` commands from Linux Terminal.  
-    - Path 
-    - Route
-    - Computer System
-    - Computer Device
-    - Bandwidth
-    - Computer Network
+    - Path: <span style="color:blue">A sequence of directly connected computing devices that begins at the sender and ends at the receiver(A).</span>
+    - Route: <span style="color:blue">The process of finding a path from the sender to the receiver(E).</span>
+    - Computer System: <span style="color:blue">A group of computing devices and programs working together for a common puropse(B).</span>
+    - Computer Device: <span style="color:blue">A physical artifact that can run a program(C).</span>
+    - Bandwidth: <span style="color:blue">The maximum amount of data that can be sent in a fixed amount of time(D).</span>
+    - Computer Network: <span style="color:blue">A group of interconnected computing devices capable of sending or receiving data(F).</span>
 
 > Watch/review College Board Daily Video 4.1.2
 
