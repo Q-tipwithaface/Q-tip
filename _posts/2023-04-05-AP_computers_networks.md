@@ -21,15 +21,24 @@ List specification of your Computer, or Computers if working as Pair/Trio
 - OS: <span style="color:blue">Microsoft Windows 11 Home</span>
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
-- Input devices: <span style="color:blue">Monitor</span>
-- Output devices: <span style="color:blue">Keyboard</span>
+- Input devices: 
+![]({{ site.baseurl }}/images/keyboardpic.png "Keyboard")
+- Output devices:
+![]({{ site.baseurl }}/images/monitorpic.png "Monitor")
 - Program File:
+![]({{ site.baseurl }}/images/programfilespic.png "Program Files")
 - Program Code:
+![]({{ site.baseurl }}/images/programcodeexpic.png "Program Code")
 - Processes:
+![]({{ site.baseurl }}/images/computerprocesspic.png "Processing")
 - Ports:
+![]({{ site.baseurl }}/images/computerportspic.png "Ports")
 - Data File:
+![]({{ site.baseurl }}/images/datafilespic.png "Data Files")
 - Inspect Running Code:
+![]({{ site.baseurl }}/images/inspectingrunningcodepic.png "Inspecting Running Code")
 - Inspect Variables:
+![]({{ site.baseurl }}/images/inspectingvariablespic.png "Inspecting Variables")
 
 
 ![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
