@@ -1,6 +1,6 @@
 <head>
    <style> 
-      input[type='Image'] { position: absolute; }
+      input[type='Image'] { position: absolute; } /* positioning the images and formatting them as inputs */
    </style>   
 </head>
 
@@ -15,34 +15,7 @@
    <input type="Image" id="test4" src="" height="150" width="150" points="" onclick="scoreboard_sp(4)" />
    <input type="Image" id="test5" src="" height="150" width="150" points="" onclick="scoreboard_sp(5)" />
 
-
    <script>
-            
-      const food_api_url = 'https://fruitteam.duckdns.org/api/foods/';
-      const scores_api_url = 'https://fruitteam.duckdns.org/api/topscores/';
-
-      var foodstuff;
-      var data;
-      async function getFoodstorage() {
-         const response = await fetch(food_api_url)
-         const data = await response.json();
-         console.log(data.foodstorage)
-         const foodstuff = await data.foodstorage;
-         console.log(foodstuff)
-         return foodstuff
-      }
-      
-      var getData;
-      fetch(food_api_url)
-         .then(response => response.json())
-         // .then(data => console.log(data))
-         .then(data => {
-            getData = data;
-            })
-         .then(() => {
-            console.log(getData);
-         });
-
       // array with the food items
       const foodimages = [
       {//image 1
@@ -75,36 +48,16 @@
          "name": "icecream", 
          "points": "50"
       }];
-
-      console.log(foodimages);
-
-      // var getScores;
-      // fetch(scores_api_url)
-      //    .then(response => response.json())
-      //    // .then(data => console.log(data))
-      //    .then(data => {
-      //       getScores = data;
-      //       })
-      //    .then(() => {
-      //       console.log(getScores);
-      //    });
-
-
-//------------------------------------------------------ May delete
-  // foodstuff = getFoodstorage();
-         // console.log(foodstuff);
-         // console.log(data);
-         // console.log(getData);
-//-----------------------------------------------
+      console.log(foodimages); // display foodimages and its objects in the console to check if the data is correct
 
       function get_images() {
-         // set image
+         // set image to a test in order to be moved across the screen in a later part of the program( function onscreen(){} )
          document.getElementById("test1").src = foodimages[0].image;
          document.getElementById("test2").src = foodimages[1].image;
          document.getElementById("test3").src = foodimages[2].image;
          document.getElementById("test4").src = foodimages[3].image;
          document.getElementById("test5").src = foodimages[4].image;
-         // set points
+         // set points to a test in order to be pulled to update the score in a later part of the program( function scoreboard_sp(idid){} )
          document.getElementById("test1").points = parseInt(foodimages[0].points);
          document.getElementById("test2").points = parseInt(foodimages[1].points);
          document.getElementById("test3").points = parseInt(foodimages[2].points);
