@@ -91,7 +91,7 @@
       function moveimage(idid) {
          var test = document.getElementById(idid);
       test.style.top = Math.floor((Math.random() * 500) + 1) + "px"; // moves each image to a random spot from top to buttom
-      test.style.left = Math.floor((Math.random() * 300) + 1) + "px"; // moves each image to a random spot from left to right
+      test.style.left = Math.floor((Math.random() * 1200) + 1) + "px"; // moves each image to a random spot from left to right
       test.style.visibility = 'visible'; // displays the image
       }
       
