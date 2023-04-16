@@ -1,19 +1,19 @@
 <head>
    <style> 
-      input[type='Image'] { position: absolute; } /* positioning the images and formatting them as inputs */
+      input[type='Image'] { position: absolute; } /* positioning the images and formatting them as inputs */   /*help from Ryan Haki*/
    </style>   
 </head>
 
 <body>
 
-   <p id="timer"></p> <!-- display time -->
-   <p id="score"></p> <!-- display score -->
+   <p id="timer"></p> <!-- display time --> <!-- idea from Ryan Haki -->
+   <p id="score"></p> <!-- display score --> <!-- idea from Ryan Haki -->
 <!--  set to an image  id         image  size                     points    call scoreboard_sp to update user's score  -->
-   <input type="Image" id="test1" src="" height="150" width="150" points="" onclick="scoreboard_sp(1)" />
-   <input type="Image" id="test2" src="" height="150" width="150" points="" onclick="scoreboard_sp(2)" />
-   <input type="Image" id="test3" src="" height="150" width="150" points="" onclick="scoreboard_sp(3)" />
-   <input type="Image" id="test4" src="" height="150" width="150" points="" onclick="scoreboard_sp(4)" />
-   <input type="Image" id="test5" src="" height="150" width="150" points="" onclick="scoreboard_sp(5)" />
+   <input type="Image" id="test1" src="" height="150" width="150" points="" onclick="scoreboard_sp(1)" /> <!-- help from Ryan Haki -->
+   <input type="Image" id="test2" src="" height="150" width="150" points="" onclick="scoreboard_sp(2)" /> <!-- help from Ryan Haki -->
+   <input type="Image" id="test3" src="" height="150" width="150" points="" onclick="scoreboard_sp(3)" /> <!-- help from Ryan Haki -->
+   <input type="Image" id="test4" src="" height="150" width="150" points="" onclick="scoreboard_sp(4)" /> <!-- help from Ryan Haki -->
+   <input type="Image" id="test5" src="" height="150" width="150" points="" onclick="scoreboard_sp(5)" /> <!-- help from Ryan Haki -->
 
    <script>
       // array with the food items
@@ -49,6 +49,8 @@
          "points": "50"
       }];
       console.log(foodimages); // display foodimages and its objects in the console to check if the data is correct
+
+      // each use of 'document.getElementById' was suggested by one of my team members, Ryan Haki. I used 'document.getElementById' a lot in this program so I am going to give credit in this comment so that I don't need to credit him for each time I used it.
 
       function get_images() {
          // set image to a test in order to be moved across the screen in a later part of the program( function onscreen(){} )
@@ -88,19 +90,17 @@
 
       function moveimage(idid) {
          var test = document.getElementById(idid);
-      // let w_screen = window.screen.availWidth - 150;
-      // let h_screen = window.screen.availHeight - 150;
-      test.style.top = Math.floor((Math.random() * 500) + 1) + "px";
-      test.style.left = Math.floor((Math.random() * 300) + 1) + "px";
-      test.style.visibility = 'visible';
+      test.style.top = Math.floor((Math.random() * 500) + 1) + "px"; // moves each image to a random spot from top to buttom
+      test.style.left = Math.floor((Math.random() * 300) + 1) + "px"; // moves each image to a random spot from left to right
+      test.style.visibility = 'visible'; // displays the image
       }
       
       function clearimage(idid) {
          var clear1 = document.getElementById(idid)
-         clear1.style.visibility = 'hidden';
+         clear1.style.visibility = 'hidden'; // hides the image
       }
 
-      function clearimages() {
+      function clearimages() { //hides all images
          clearimage("test1");
          clearimage("test2");
          clearimage("test3");
@@ -108,39 +108,39 @@
          clearimage("test5");
       }
       
-      function stop_moveimage(moveimage_interval) {
-         clearInterval(moveimage_interval);
-         clearimages();
+      function stop_moveimage(moveimage_interval) { // stops the game
+         clearInterval(moveimage_interval); //stops moving the images 
+         clearimages(); //hides all images
       }
 
-      timer = 30
-      document.getElementById("timer").innerHTML = "Time left: " + timer + " seconds"
+      timer = 30 // starting time set to 30 seconds
+      document.getElementById("timer").innerHTML = "Time left: " + timer + " seconds" // displays starting time
 
       function onscreen() {
-         clearimages();
-         something = Math.ceil(Math.random() * 5);
-         timer = timer - 1
-         document.getElementById("timer").innerHTML = "Time left: " + timer + " seconds"
+         clearimages(); // hides all images
+         something = Math.ceil(Math.random() * 5); // determines how many images will appear at a time
+         timer = timer - 1 // decreases time by 1
+         document.getElementById("timer").innerHTML = "Time left: " + timer + " seconds" // displays the updated time
          if (something >= 1) {
-         moveimage("test1");
+         moveimage("test1"); // displays food1 and puts it in a random spot on the screen
          } 
          if (something >= 2) {
-         moveimage("test2");
+         moveimage("test2"); // displays food1-2 and puts them in random spots on the screen
          }
          if (something >= 3) {
-         moveimage("test3");
+         moveimage("test3"); // displays food1-3 and puts them in random spots on the screen
          }
          if (something >= 4) {
-         moveimage("test4");
+         moveimage("test4"); // displays food1-4 and puts them in random spots on the screen
          }
          if (something >= 5) {
-         moveimage("test5");
+         moveimage("test5"); // displays food1-5 and puts them in random spots on the screen
          }
       }
 
-      get_images();
-      thing = setInterval(onscreen, 1000);
-      image_timeout = setTimeout(stop_moveimage, 30000, thing);
+      get_images(); // calls get_images()
+      thing = setInterval(onscreen, 1000); //runs the function onscreen each second
+      image_timeout = setTimeout(stop_moveimage, 30000, thing); // ends the game after 30 seconds
 
    </script>
 </body>
