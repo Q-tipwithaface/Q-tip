@@ -67,7 +67,14 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 > Watch/review College Board Daily Video 4.1.2
 
-- Complete True of False Questions
+- Complete True or False Questions
+    - Open standards and protocols enable different manufacturers and developers to build hardware and software that can communicate with hardware and software on the rest of the internet. <span style="color:blue">(True)</span>
+    - IETF is a task force used to enforce laws to keep manufacturers out of the internet. <span style="color:blue">(False)</span>
+    - Routes are determined in advanced and are not flexible. <span style="color:blue">(False)</span>
+    - A protocol is an agreed-upon set of rules that specify the behavior of a system. <span style="color:blue">(True)</span>
+    - UDP guarantees transfers and is faster. <span style="color:blue">(False)</span>
+    - World Wide Web(WWW) is the internet. <span style="color:blue">(False)</span>
+    - HTTP is a protocol used by the World Wide Web. <span style="color:blue">(True)</span>
 
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.
@@ -120,18 +127,25 @@ The "network" layer is responsible for ***routing data packets between networks*
 > Watch both Daily videos for 4.2
 
 - Complete the network activity, summarize your understanding of fault tolerance.
-
+    - <span style="color:blue"> Example #1: This example is fault tolerant because each device has more than one connection.</span>
+    - <span style="color:blue"> Example #2: This example is not fault tolerant because device (F) has only one connection.</span>
+    - <span style="color:blue"> Example #3: This example is not fault tolerant because device (A) has only one connection.</span>
+    - <span style="color:blue"> Question #1: What is not a benefit of a fault-tolerant network? Answer: Data will only take one route from one device to another, no matter the number of routes available.(C)</span>
+    - <span style="color:blue"> Question #2: What would make the given network fault-tolerant? Answer: A connection from A to B.(A)</span>
+    - <span style="color:blue"> Fault tolerance allows data to be transmitted faster and more reliably from one device to another by using multiple different networks.</span>
 
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
 - What is naturally Distributed in Frontend/Backend archeticture?  
+    - <span style="color:blue">The backend is normally used for the running of different tasks, functions, programs, and even other servers. This allows a program to run its parts and to be usable. The Frontend is normally used just for the user/users to have access to the program. Its job is to display it to the user and do it by having connections with the backend.</span>
 
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
 
 
 > Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.
 - Review this [article](https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray)...  Can you get parallel code on images to work more effectively?  I have not tried Ray.
+    - <span style="color:blue"> You can get parallel code on images to work more effectively by using Ray. Ray makes it so an image gets processed through different tasks running parallel across multiple cores. This would make processing the images more time efficient.</span>
 
 - Code example from ChatGPT using squares.  This might be more interesting if nums we generated to be a lot bigger.
 
