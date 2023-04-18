@@ -15,10 +15,10 @@ week: 29
 > As we have learned, a computer needs aa program to do something smart.  The sequence of a program initiates a series of actions with the computers Central Processing Unit (CPU). This component is essentially a binary machine focussing on program instructions provided.  The CPU retrieives and stores the data it acts upon in Random Access Memory (RAM). Between the CPU, RAM, and Storage Devices a computer can work with many programs and large amounts of data.
 
 List specification of your Computer, or Computers if working as Pair/Trio
-- Processor GHz: <span style="color:blue">12th Gen Intel(R) Core(TM) i7-1255U   1.70 GHz</span>
-- Memory in GB: <span style="color:blue">30.7 GB</span>
-- Storage in GB: <span style="color:blue">475 GB</span>
-- OS: <span style="color:blue">Microsoft Windows 11 Home</span>
+- Processor GHz: 12th Gen Intel(R) Core(TM) i7-1255U   1.70 GHz
+- Memory in GB: 30.7 GB
+- Storage in GB: 475 GB
+- OS: Microsoft Windows 11 Home
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
 - Input devices: 
@@ -58,23 +58,23 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - Bandwidth is usually measured in bits per second
 
 - Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use `traceroute` and `ping` commands from Linux Terminal.  
-    - Path: <span style="color:blue">A sequence of directly connected computing devices that begins at the sender and ends at the receiver(A).</span>
-    - Route: <span style="color:blue">The process of finding a path from the sender to the receiver(E).</span>
-    - Computer System: <span style="color:blue">A group of computing devices and programs working together for a common puropse(B).</span>
-    - Computer Device: <span style="color:blue">A physical artifact that can run a program(C).</span>
-    - Bandwidth: <span style="color:blue">The maximum amount of data that can be sent in a fixed amount of time(D).</span>
-    - Computer Network: <span style="color:blue">A group of interconnected computing devices capable of sending or receiving data(F).</span>
+    - Path: A sequence of directly connected computing devices that begins at the sender and ends at the receiver(A).
+    - Route: The process of finding a path from the sender to the receiver(E).
+    - Computer System: A group of computing devices and programs working together for a common puropse(B).
+    - Computer Device: A physical artifact that can run a program(C).
+    - Bandwidth: The maximum amount of data that can be sent in a fixed amount of time(D).
+    - Computer Network: A group of interconnected computing devices capable of sending or receiving data(F).
 
 > Watch/review College Board Daily Video 4.1.2
 
 - Complete True or False Questions
-    - Open standards and protocols enable different manufacturers and developers to build hardware and software that can communicate with hardware and software on the rest of the internet. <span style="color:blue">(True)</span>
-    - IETF is a task force used to enforce laws to keep manufacturers out of the internet. <span style="color:blue">(False)</span>
-    - Routes are determined in advanced and are not flexible. <span style="color:blue">(False)</span>
-    - A protocol is an agreed-upon set of rules that specify the behavior of a system. <span style="color:blue">(True)</span>
-    - UDP guarantees transfers and is faster. <span style="color:blue">(False)</span>
-    - World Wide Web(WWW) is the internet. <span style="color:blue">(False)</span>
-    - HTTP is a protocol used by the World Wide Web. <span style="color:blue">(True)</span>
+    - Open standards and protocols enable different manufacturers and developers to build hardware and software that can communicate with hardware and software on the rest of the internet. (True)
+    - IETF is a task force used to enforce laws to keep manufacturers out of the internet. (False)
+    - Routes are determined in advanced and are not flexible. (False)
+    - A protocol is an agreed-upon set of rules that specify the behavior of a system. (True)
+    - UDP guarantees transfers and is faster. (False)
+    - World Wide Web(WWW) is the internet. (False)
+    - HTTP is a protocol used by the World Wide Web. (True)
 
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.
@@ -127,25 +127,25 @@ The "network" layer is responsible for ***routing data packets between networks*
 > Watch both Daily videos for 4.2
 
 - Complete the network activity, summarize your understanding of fault tolerance.
-    - <span style="color:blue"> Example #1: This example is fault tolerant because each device has more than one connection.</span>
-    - <span style="color:blue"> Example #2: This example is not fault tolerant because device (F) has only one connection.</span>
-    - <span style="color:blue"> Example #3: This example is not fault tolerant because device (A) has only one connection.</span>
-    - <span style="color:blue"> Question #1: What is not a benefit of a fault-tolerant network? Answer: Data will only take one route from one device to another, no matter the number of routes available.(C)</span>
-    - <span style="color:blue"> Question #2: What would make the given network fault-tolerant? Answer: A connection from A to B.(A)</span>
-    - <span style="color:blue"> Fault tolerance allows data to be transmitted faster and more reliably from one device to another by using multiple different networks.</span>
+    - Example #1: This example is fault tolerant because each device has more than one connection.
+    - Example #2: This example is not fault tolerant because device (F) has only one connection.
+    - Example #3: This example is not fault tolerant because device (A) has only one connection.
+    - Question #1: What is not a benefit of a fault-tolerant network? Answer: Data will only take one route from one device to another, no matter the number of routes available.(C)
+    - Question #2: What would make the given network fault-tolerant? Answer: A connection from A to B.(A)
+    - Fault tolerance allows data to be transmitted faster and more reliably from one device to another by using multiple different networks.
 
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
 - What is naturally Distributed in Frontend/Backend archeticture?  
-    - <span style="color:blue">The backend is normally used for the running of different tasks, functions, programs, and even other servers. This allows a program to run its parts and to be usable. The Frontend is normally used just for the user/users to have access to the program. Its job is to display it to the user and do it by having connections with the backend.</span>
+    - The backend is normally used for the running of different tasks, functions, programs, and even other servers. This allows a program to run its parts and to be usable. The Frontend is normally used just for the user/users to have access to the program. Its job is to display it to the user and do it by having connections with the backend.
 
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
 
 
 > Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.
 - Review this [article](https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray)...  Can you get parallel code on images to work more effectively?  I have not tried Ray.
-    - <span style="color:blue"> You can get parallel code on images to work more effectively by using Ray. Ray makes it so an image gets processed through different tasks running parallel across multiple cores. This would make processing the images more time efficient.</span>
+    - You can get parallel code on images to work more effectively by using Ray. Ray makes it so an image gets processed through different tasks running parallel across multiple cores. This would make processing the images more time efficient.
 
 - Code example from ChatGPT using squares.  This might be more interesting if nums we generated to be a lot bigger.
 
