@@ -1,70 +1,38 @@
-<h1 id="theme-changer">Theme Changer</h1>
-<p>You guys can copy this file and change/improve it here is the <a href="https://github.com/AniCricKet/tmv4/blob/master/_pages/theme-changer.md">link</a></p>
+<h1 id="theme-changer"><center>Theme Changer</center></h1>
 
+<html>
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../assets/css/fastpages-styles.css" />
-    <link rel="stylesheet" href="../assets/css/dark-mode1.css" id="theme-link" />
+    <link rel="stylesheet" href="../assets/css/fastpages-styles.css" id="default-theme-link" />
+    <link rel="stylesheet" href="../assets/css/dark-mode1.css" id="dark-theme-link" disabled="" />
+    <link rel="stylesheet" href="../assets/css/other-style.css" id="other-theme-link" disabled="" />
 </head>
 <body>
-    <button id="theme-toggle">Toggle Theme</button>
-    <script>
-        const toggleButton = document.querySelector('#theme-toggle');
-        const themeLink = document.querySelector('#theme-link');
-        toggleButton.addEventListener('click', () => {
-            if (themeLink.getAttribute('href') === '../assets/css/fastpages-styles.css') {
-                themeLink.setAttribute('href', '../assets/css/dark-mode1.css');
-            } else {
-                themeLink.setAttribute('href', '../assets/css/fastpages-styles.css');
-            }
-        });
-    </script>
-</body>
-<p>&lt;/html&gt;</p>
-
-<!--
-<html>
-<body>
-    <?php
-        include("../_includes/theme-changer.php")
-    ?>
-</body>
-</html>
-
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../assets/css/fastpages-styles.css" id="default-theme-link">
-    <link rel="stylesheet" href="../assets/css/dark-mode1.css" id="dark-theme-link" disabled>
-    <link rel="stylesheet" href="../assets/css/other-style.css" id="mort-theme-link" disabled>
-</head>
-<body>
-    <button id="default-theme-toggle">Default Theme</button>
-    <button id="dark-theme-toggle">Dark Theme</button>
-    <button id="mort-theme-toggle">Mort Theme</button>
+    <center><button id="default-theme-toggle">Default Theme</button></center>
+    <center><button id="dark-theme-toggle">Dark Theme</button></center>
+    <center><button id="other-theme-toggle">Other Theme</button></center>
     <script>
         const defaultToggleButton = document.querySelector('#default-theme-toggle');
         const darkToggleButton = document.querySelector('#dark-theme-toggle');
-        const mortToggleButton = document.querySelector('#mort-theme-toggle');
+        const otherToggleButton = document.querySelector('#other-theme-toggle');
         const defaultThemeLink = document.querySelector('#default-theme-link');
         const darkThemeLink = document.querySelector('#dark-theme-link');
-        const mortThemeLink = document.querySelector('#mort-theme-link');
+        const otherThemeLink = document.querySelector('#other-theme-link');
         defaultToggleButton.addEventListener('click', () => {
             defaultThemeLink.disabled = false;
             darkThemeLink.disabled = true;
-            mortThemeLink.disabled = true;
+            otherThemeLink.disabled = true;
         });
         darkToggleButton.addEventListener('click', () => {
             defaultThemeLink.disabled = true;
             darkThemeLink.disabled = false;
-            mortThemeLink.disabled = true;
+            otherThemeLink.disabled = true;
         });
-        mortToggleButton.addEventListener('click', () => {
+        otherToggleButton.addEventListener('click', () => {
             defaultThemeLink.disabled = true;
             darkThemeLink.disabled = true;
-            mortThemeLink.disabled = false;
+            otherThemeLink.disabled = false;
         });
     </script>
 </body>
 </html>
--->
