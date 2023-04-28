@@ -50,6 +50,7 @@ type: pbl
         border: 1px solid black;
         border-radius: 1rem;
         font-size: 1.2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 5);
       }
       button {
         background-color: var(--primary-color);
@@ -59,10 +60,11 @@ type: pbl
         padding: 1rem 1rem;
         font-size: 1.2rem;
         cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 5);
       }
       button:hover {
         background-color: var(--aqua-color);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 5);
       }
       #result {
         font-size: 1.2rem;
@@ -82,10 +84,11 @@ type: pbl
         border-radius: 0.5rem;
         font-size: 1.2rem;
         cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 5);
       }
       #home-button:hover {
         background-color: var(--aqua-color);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 5);
       }
     </style>
   </head>
