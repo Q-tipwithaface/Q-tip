@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>P4-Y 4/25 Guide to SASS | Lucas Pages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="P4-Y 4/25 Guide to SASS" />
+<meta name="author" content="Aniket Chakradeo, Ryan Hakimipour, Max Tullius, Jaden Nguyen, Nathan Kim, Kalani Cabral-Omana, Evan Appari, Max Wu," />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An guide on how to use SASS to build a more customized frontend." />
+<meta property="og:description" content="An guide on how to use SASS to build a more customized frontend." />
+<link rel="canonical" href="https://q-tipwithaface.github.io/Q-tip/student/2023/04/27/P4_Y_Guide_to_SASS.html" />
+<meta property="og:url" content="https://q-tipwithaface.github.io/Q-tip/student/2023/04/27/P4_Y_Guide_to_SASS.html" />
+<meta property="og:site_name" content="Lucas Pages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-27T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="P4-Y 4/25 Guide to SASS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aniket Chakradeo, Ryan Hakimipour, Max Tullius, Jaden Nguyen, Nathan Kim, Kalani Cabral-Omana, Evan Appari, Max Wu,"},"dateModified":"2023-04-27T00:00:00-05:00","datePublished":"2023-04-27T00:00:00-05:00","description":"An guide on how to use SASS to build a more customized frontend.","headline":"P4-Y 4/25 Guide to SASS","mainEntityOfPage":{"@type":"WebPage","@id":"https://q-tipwithaface.github.io/Q-tip/student/2023/04/27/P4_Y_Guide_to_SASS.html"},"url":"https://q-tipwithaface.github.io/Q-tip/student/2023/04/27/P4_Y_Guide_to_SASS.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Q-tip/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://q-tipwithaface.github.io/Q-tip/feed.xml" title="Lucas Pages" /><link rel="shortcut icon" type="image/x-icon" href="/Q-tip/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Q-tip/">Lucas Pages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Q-tip/_pages/00_Schedule.html">Schedule</a><a class="page-link" href="/Q-tip/API/">API</a><a class="page-link" href="/Q-tip/Collegeboard/">Collegeboard</a><a class="page-link" href="/Q-tip/Javascript/">Javascript</a><a class="page-link" href="/Q-tip/numbergame/">Number Game</a><a class="page-link" href="/Q-tip/about/">About Me</a><a class="page-link" href="/Q-tip/notes/">Notes</a><a class="page-link" href="/Q-tip/search/">Search</a><a class="page-link" href="/Q-tip/categories/">Tags</a><a class="page-link" href="/Q-tip/themechanger/">Theme Changer</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">P4-Y 4/25 Guide to SASS</h1><p class="page-description">An guide on how to use SASS to build a more customized frontend.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-27T00:00:00-05:00" itemprop="datePublished">
+        Apr 27, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Aniket Chakradeo, Ryan Hakimipour, Max Tullius, Jaden Nguyen, Nathan Kim, Kalani Cabral-Omana, Evan Appari, Max Wu,</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Q-tip/categories/#student">student</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Classwork:">Classwork: </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#What-are-5-Basic-UI-Elements?:">What are 5 Basic UI Elements?: </a></li>
+<li class="toc-entry toc-h3"><a href="#In-your-own-words,-explain-what-SASS-does:">In your own words, explain what SASS does: </a></li>
+<li class="toc-entry toc-h3"><a href="#What-are-some-benefits-to-SASS?:">What are some benefits to SASS?: </a></li>
+<li class="toc-entry toc-h3"><a href="#Describe/Explain-one-of-the-more-"advanced"-SASS-properties-below-in-detail:">Describe/Explain one of the more &quot;advanced&quot; SASS properties below in detail: </a></li>
+<li class="toc-entry toc-h2"><a href="#Link-to-Number-Guesser-Game">Link to Number Guesser Game </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#How-does-the-number-guesser-game-work?">How does the number guesser game work? </a></li>
+<li class="toc-entry toc-h3"><a href="#Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?">Explain how SASS can be used to make the number guesser game look more visually appealing? </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Hacks---Insert-any-screenshots,-code-segments,-etc.-that-you-need-to-in-order-to-demonstrate-an-understanding-of-the-hacks">Hacks - Insert any screenshots, code segments, etc. that you need to in order to demonstrate an understanding of the hacks </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Hacks-Part-1">Hacks Part 1 </a></li>
+<li class="toc-entry toc-h2"><a href="#Hacks-Part-2">Hacks Part 2 </a></li>
+<li class="toc-entry toc-h2"><a href="#Hacks-Part-3">Hacks Part 3 </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-27-P4_Y_Guide_to_SASS.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Classwork:">
+<a class="anchor" href="#Classwork:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classwork:<a class="anchor-link" href="#Classwork:"> </a>
+</h1>
+<h3 id="What-are-5-Basic-UI-Elements?:">
+<a class="anchor" href="#What-are-5-Basic-UI-Elements?:" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are 5 Basic UI Elements?:<a class="anchor-link" href="#What-are-5-Basic-UI-Elements?:"> </a>
+</h3>
+<ol>
+<li>Color </li>
+<li>Font</li>
+<li>Layout</li>
+<li>Icons</li>
+<li>Interactivity</li>
+</ol>
+<ul>
+<li>Bonus. Accessibility</li>
+</ul>
+<h3 id="In-your-own-words,-explain-what-SASS-does:">
+<a class="anchor" href="#In-your-own-words,-explain-what-SASS-does:" aria-hidden="true"><span class="octicon octicon-link"></span></a>In your own words, explain what SASS does:<a class="anchor-link" href="#In-your-own-words,-explain-what-SASS-does:"> </a>
+</h3>
+<ul>
+<li>SASS is an addition to css that reduces the complex of the code and allows you to create your own style.</li>
+</ul>
+<h3 id="What-are-some-benefits-to-SASS?:">
+<a class="anchor" href="#What-are-some-benefits-to-SASS?:" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are some benefits to SASS?:<a class="anchor-link" href="#What-are-some-benefits-to-SASS?:"> </a>
+</h3>
+<ul>
+<li>Some benefits of SASS is that it has many usable variables, more build in functions, and can easly convert the code to the normal CSS. The build in functions and features are also easy to understand and use for formating a page.</li>
+</ul>
+<h3 id='Describe/Explain-one-of-the-more-"advanced"-SASS-properties-below-in-detail:'>
+<a class="anchor" href="#Describe/Explain-one-of-the-more-" advanced aria-hidden="true"><span class="octicon octicon-link"></span></a>Describe/Explain one of the more "advanced" SASS properties below in detail:<a class="anchor-link" href="#Describe/Explain-one-of-the-more-%22advanced%22-SASS-properties-below-in-detail:"> </a>
+</h3>
+<ul>
+<li>
+<p>One of the more advanced SASS properties is @keyframes fade-in {}. This properties allows a programmer to display an images, gif, or video by first fading that object in. animation-delay: Ns; also sets the fade in of the object to a certain speed.</p>
+</li>
+<li>
+<p>.grid-container is another advanced SASS property that uses the lines grid-item-N {} to format an object in a grid.</p>
+</li>
+<li>
+<p>@import is used to pull different types of themes for you to use for yuor own webpages.</p>
+</li>
+</ul>
+<h2 id="Link-to-Number-Guesser-Game">
+<a class="anchor" href="#Link-to-Number-Guesser-Game" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://anicricket.github.io/tmv4/_pages/numberguesser_v3.html">Link to Number Guesser Game</a><a class="anchor-link" href="#Link-to-Number-Guesser-Game"> </a>
+</h2>
+<h3 id="How-does-the-number-guesser-game-work?">
+<a class="anchor" href="#How-does-the-number-guesser-game-work?" aria-hidden="true"><span class="octicon octicon-link"></span></a>How does the number guesser game work?<a class="anchor-link" href="#How-does-the-number-guesser-game-work?"> </a>
+</h3>
+<ul>
+<li>The number guesser game works by first using math.random to get a number that is from 1 to 100. Then it checks to see if each guess by the user is that number using the function checkguess. If not, the code with display too high or too low until the user gets it right. Once the right number is clicked, the game ends and displays the number of attempts taken.</li>
+</ul>
+<h3 id="Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?">
+<a class="anchor" href="#Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explain how SASS can be used to make the number guesser game look more visually appealing?<a class="anchor-link" href="#Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?"> </a>
+</h3>
+<ul>
+<li>SASS can make the number guesser game look more visually appealing by using variables to define colors or rgb values. You can also use JavaScript to change the formating of a page or game with the SASS features.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks---Insert-any-screenshots,-code-segments,-etc.-that-you-need-to-in-order-to-demonstrate-an-understanding-of-the-hacks">
+<a class="anchor" href="#Hacks---Insert-any-screenshots,-code-segments,-etc.-that-you-need-to-in-order-to-demonstrate-an-understanding-of-the-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks - Insert any screenshots, code segments, etc. that you need to in order to demonstrate an understanding of the hacks<a class="anchor-link" href="#Hacks---Insert-any-screenshots,-code-segments,-etc.-that-you-need-to-in-order-to-demonstrate-an-understanding-of-the-hacks"> </a>
+</h1>
+<h2 id="Hacks-Part-1">
+<a class="anchor" href="#Hacks-Part-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks Part 1<a class="anchor-link" href="#Hacks-Part-1"> </a>
+</h2>
+<p><a href="https://q-tipwithaface.github.io/Q-tip/">Unique element</a></p>
+<p>The uniques element I made was adding SASS to my fastpage homepage(index file)</p>
+<p>code used below:
+<!--  --></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">---</span>
+<span class="n">layout</span><span class="p">:</span> <span class="n">home</span>
+<span class="n">search_exclude</span><span class="p">:</span> <span class="n">true</span>
+<span class="n">image</span><span class="p">:</span> <span class="n">images</span><span class="o">/</span><span class="n">logo</span><span class="o">.</span><span class="n">png</span>
+<span class="o">---</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+        <span class="p">:</span><span class="n">root</span> <span class="p">{</span>
+        <span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#800080;</span>
+        <span class="o">--</span><span class="n">secondary</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#2907bf;</span>
+        <span class="o">--</span><span class="n">aqua</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#7fffd4;</span>
+        <span class="o">--</span><span class="n">text</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#010101;</span>
+      <span class="p">}</span>
+      <span class="n">body</span> <span class="p">{</span>
+        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="o">--</span><span class="n">secondary</span><span class="o">-</span><span class="n">color</span><span class="p">);</span>
+        <span class="n">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="o">--</span><span class="n">text</span><span class="o">-</span><span class="n">color</span><span class="p">);</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="s1">'Comic Sans MS'</span><span class="p">;</span>
+        <span class="n">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+        <span class="n">flex</span><span class="o">-</span><span class="n">direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+        <span class="n">align</span><span class="o">-</span><span class="n">items</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+        <span class="n">justify</span><span class="o">-</span><span class="n">content</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">h4</span> <span class="p">{</span>
+        <span class="n">padding</span><span class="p">:</span> <span class="mi">1</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="n">black</span><span class="p">;</span>
+        <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mi">1</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">2</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="n">px</span> <span class="n">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+        <span class="n">margin</span><span class="o">-</span><span class="n">block</span><span class="o">-</span><span class="n">end</span><span class="p">:</span> <span class="mi">0</span><span class="n">em</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">h5</span> <span class="p">{</span>
+        <span class="n">padding</span><span class="p">:</span> <span class="mi">1</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="n">black</span><span class="p">;</span>
+        <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mi">1</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">2</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="n">px</span> <span class="n">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">h4</span><span class="o">&gt;&lt;</span><span class="n">center</span><span class="o">&gt;</span><span class="n">This</span> <span class="n">website</span> <span class="n">was</span> <span class="n">created</span> <span class="k">with</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"https://github.com/fastai/fastpages"</span><span class="o">&gt;</span><span class="n">fastpages</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="ow">and</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">by</span> <span class="n">Lucas</span> <span class="n">at</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"https://www.powayusd.com/en-US/Schools/HS/DNHS/Home"</span><span class="o">&gt;</span><span class="n">Del</span> <span class="n">Norte</span> <span class="n">High</span> <span class="n">School</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;.&lt;/</span><span class="n">center</span><span class="o">&gt;&lt;</span><span class="n">h4</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">center</span><span class="o">&gt;&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s2">"/Q-tip/images/Screenshot of cat typing 2022-08-26.png"</span> <span class="n">height</span><span class="o">=</span><span class="s2">"auto"</span> <span class="n">width</span><span class="o">=</span><span class="s2">"auto"</span><span class="o">&gt;&lt;/</span><span class="n">center</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">h5</span><span class="o">&gt;&lt;</span><span class="n">center</span><span class="o">&gt;</span><span class="n">Partners</span><span class="p">:</span> <span class="n">Aniket</span> <span class="n">Team</span><span class="p">:</span> <span class="n">Aniket</span><span class="p">,</span> <span class="n">Soham</span><span class="p">,</span> <span class="n">Ryan</span><span class="o">&lt;/</span><span class="n">center</span><span class="o">&gt;&lt;/</span><span class="n">h5</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> 
+<span class="c1"># Posts --&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks-Part-2">
+<a class="anchor" href="#Hacks-Part-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks Part 2<a class="anchor-link" href="#Hacks-Part-2"> </a>
+</h2>
+<p><a href="https://q-tipwithaface.github.io/Q-tip/themechanger/">Theme Changer</a></p>
+<p>code used below:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">---</span>
+<span class="n">title</span><span class="p">:</span> <span class="n">Theme</span> <span class="n">Changer</span>
+<span class="n">layout</span><span class="p">:</span> <span class="n">default</span>
+<span class="n">permalink</span><span class="p">:</span> <span class="o">/</span><span class="n">themechanger</span><span class="o">/</span>
+<span class="nb">type</span><span class="p">:</span> <span class="n">pbl</span>
+<span class="o">---</span>
+<span class="c1"># &lt;center&gt;Theme Changer&lt;/center&gt;</span>
+
+<span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s2">"UTF-8"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="n">href</span><span class="o">=</span><span class="s2">"../assets/css/fastpages-styles.css"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"default-theme-link"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="n">href</span><span class="o">=</span><span class="s2">"../assets/css/dark-mode1.css"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"dark-theme-link"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="n">href</span><span class="o">=</span><span class="s2">"../assets/css/other-style.css"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"other-theme-link"</span> <span class="n">disabled</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">center</span><span class="o">&gt;&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"default-theme-toggle"</span><span class="o">&gt;</span><span class="n">Default</span> <span class="n">Theme</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;&lt;/</span><span class="n">center</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">center</span><span class="o">&gt;&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"dark-theme-toggle"</span><span class="o">&gt;</span><span class="n">Dark</span> <span class="n">Theme</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;&lt;/</span><span class="n">center</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">center</span><span class="o">&gt;&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"other-theme-toggle"</span><span class="o">&gt;</span><span class="n">Other</span> <span class="n">Theme</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;&lt;/</span><span class="n">center</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+        <span class="n">const</span> <span class="n">defaultToggleButton</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s1">'#default-theme-toggle'</span><span class="p">);</span>
+        <span class="n">const</span> <span class="n">darkToggleButton</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s1">'#dark-theme-toggle'</span><span class="p">);</span>
+        <span class="n">const</span> <span class="n">otherToggleButton</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s1">'#other-theme-toggle'</span><span class="p">);</span>
+        <span class="n">const</span> <span class="n">anotherToggleButton</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s1">'#another-theme-toggle'</span><span class="p">);</span>
+        <span class="n">const</span> <span class="n">defaultThemeLink</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s1">'#default-theme-link'</span><span class="p">);</span>
+        <span class="n">const</span> <span class="n">darkThemeLink</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s1">'#dark-theme-link'</span><span class="p">);</span>
+        <span class="n">const</span> <span class="n">otherThemeLink</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s1">'#other-theme-link'</span><span class="p">);</span>
+        <span class="n">const</span> <span class="n">anotherThemeLink</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s1">'#another-theme-link'</span><span class="p">);</span>
+        <span class="n">defaultToggleButton</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="n">defaultThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+            <span class="n">darkThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+            <span class="n">otherThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+            <span class="n">anotherThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+        <span class="p">});</span>
+        <span class="n">darkToggleButton</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="n">defaultThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+            <span class="n">darkThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+            <span class="n">otherThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+            <span class="n">anotherThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+        <span class="p">});</span>
+        <span class="n">otherToggleButton</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="n">defaultThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+            <span class="n">darkThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+            <span class="n">otherThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+            <span class="n">anotherThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+        <span class="p">});</span>
+        <span class="n">anotherToggleButton</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="n">defaultThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+            <span class="n">darkThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+            <span class="n">otherThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+            <span class="n">anotherThemeLink</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+        <span class="p">});</span>
+    <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks-Part-3">
+<a class="anchor" href="#Hacks-Part-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks Part 3<a class="anchor-link" href="#Hacks-Part-3"> </a>
+</h2>
+<p><a href="https://q-tipwithaface.github.io/Q-tip/numbergame/">Number Guesser with SASS</a></p>
+<p>code used below:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Guess</span> <span class="n">the</span> <span class="n">Number</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+      <span class="p">:</span><span class="n">root</span> <span class="p">{</span>
+        <span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#800080;</span>
+        <span class="o">--</span><span class="n">secondary</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#0000FF;</span>
+        <span class="o">--</span><span class="n">aqua</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#7fffd4;</span>
+        <span class="o">--</span><span class="n">text</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#800080;</span>
+      <span class="p">}</span>
+      <span class="n">body</span> <span class="p">{</span>
+        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="o">--</span><span class="n">secondary</span><span class="o">-</span><span class="n">color</span><span class="p">);</span>
+        <span class="n">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="o">--</span><span class="n">text</span><span class="o">-</span><span class="n">color</span><span class="p">);</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="s1">'Comic Sans MS'</span><span class="p">;</span>
+        <span class="n">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+        <span class="n">flex</span><span class="o">-</span><span class="n">direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+        <span class="n">align</span><span class="o">-</span><span class="n">items</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+        <span class="n">justify</span><span class="o">-</span><span class="n">content</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+        <span class="n">height</span><span class="p">:</span> <span class="mi">90</span><span class="n">vh</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">h1</span> <span class="p">{</span>
+        <span class="n">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="n">color</span><span class="p">);</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">6</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">text</span><span class="o">-</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+        <span class="n">margin</span><span class="o">-</span><span class="n">top</span><span class="p">:</span> <span class="mi">0</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">margin</span><span class="o">-</span><span class="n">block</span><span class="o">-</span><span class="n">end</span><span class="p">:</span> <span class="mi">0</span><span class="n">em</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">p</span> <span class="p">{</span>
+        <span class="n">margin</span><span class="p">:</span> <span class="mi">1</span><span class="n">rem</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">margin</span><span class="o">-</span><span class="n">block</span><span class="o">-</span><span class="n">start</span><span class="p">:</span> <span class="mi">0</span><span class="n">em</span><span class="p">;</span>
+        <span class="n">margin</span><span class="o">-</span><span class="n">block</span><span class="o">-</span><span class="n">end</span><span class="p">:</span> <span class="mi">1</span><span class="n">em</span><span class="p">;</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">2</span><span class="n">rem</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nb">input</span><span class="p">[</span><span class="nb">type</span><span class="o">=</span><span class="s2">"text"</span><span class="p">],</span> <span class="n">button</span> <span class="p">{</span>
+        <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+        <span class="nb">max</span><span class="o">-</span><span class="n">width</span><span class="p">:</span> <span class="mi">25</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">margin</span><span class="o">-</span><span class="n">bottom</span><span class="p">:</span> <span class="o">.</span><span class="mi">5</span><span class="n">rem</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nb">input</span><span class="p">[</span><span class="nb">type</span><span class="o">=</span><span class="s2">"text"</span><span class="p">]</span> <span class="p">{</span>
+        <span class="n">padding</span><span class="p">:</span> <span class="mi">1</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="n">black</span><span class="p">;</span>
+        <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mi">1</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.2</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="n">px</span> <span class="n">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="n">button</span> <span class="p">{</span>
+        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="n">color</span><span class="p">);</span>
+        <span class="n">color</span><span class="p">:</span> <span class="c1">#c0c0c0;</span>
+        <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="n">black</span><span class="p">;</span>
+        <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mi">5</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">padding</span><span class="p">:</span> <span class="mi">1</span><span class="n">rem</span> <span class="mi">1</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.2</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">cursor</span><span class="p">:</span> <span class="n">pointer</span><span class="p">;</span>
+        <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="n">px</span> <span class="n">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="n">button</span><span class="p">:</span><span class="n">hover</span> <span class="p">{</span>
+        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="o">--</span><span class="n">aqua</span><span class="o">-</span><span class="n">color</span><span class="p">);</span>
+        <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="n">px</span> <span class="n">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="c1">#result {</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.2</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">weight</span><span class="p">:</span> <span class="n">bold</span><span class="p">;</span>
+        <span class="n">text</span><span class="o">-</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+        <span class="n">margin</span><span class="o">-</span><span class="n">top</span><span class="p">:</span> <span class="mi">2</span><span class="n">rem</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="c1">#home-button {</span>
+        <span class="n">position</span><span class="p">:</span> <span class="n">absolute</span><span class="p">;</span>
+        <span class="n">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">margin</span><span class="p">:</span> <span class="mi">1</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">padding</span><span class="p">:</span> <span class="mf">0.5</span><span class="n">rem</span> <span class="mi">1</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="n">color</span><span class="p">);</span>
+        <span class="n">color</span><span class="p">:</span> <span class="c1">#c0c0c0;</span>
+        <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="n">black</span><span class="p">;;</span>
+        <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mf">0.5</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.2</span><span class="n">rem</span><span class="p">;</span>
+        <span class="n">cursor</span><span class="p">:</span> <span class="n">pointer</span><span class="p">;</span>
+        <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="n">px</span> <span class="n">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="c1">#home-button:hover {</span>
+        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="o">--</span><span class="n">aqua</span><span class="o">-</span><span class="n">color</span><span class="p">);</span>
+        <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="n">px</span> <span class="n">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"home-button"</span> <span class="n">onclick</span><span class="o">=</span><span class="s2">"goHome()"</span><span class="o">&gt;</span><span class="n">Home</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Guess</span> <span class="n">the</span> <span class="n">Number</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Try</span> <span class="n">to</span> <span class="n">guess</span> <span class="n">the</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mf">100.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"guess"</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">"Enter your guess"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">button</span> <span class="n">onclick</span><span class="o">=</span><span class="s2">"checkGuess()"</span><span class="o">&gt;</span><span class="n">Submit</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"result"</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+      <span class="n">const</span> <span class="n">randomNumber</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="n">let</span> <span class="n">attempts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="n">function</span> <span class="n">checkGuess</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">const</span> <span class="n">guess</span> <span class="o">=</span> <span class="n">parseInt</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"guess"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">);</span>
+        <span class="n">attempts</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">guess</span> <span class="o">===</span> <span class="n">randomNumber</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="err">`</span><span class="n">Congratulations</span><span class="err">!</span> <span class="n">You</span> <span class="n">guessed</span> <span class="n">the</span> <span class="n">number</span> <span class="ow">in</span> <span class="err">$</span><span class="p">{</span><span class="n">attempts</span><span class="p">}</span> <span class="n">attempts</span><span class="o">.</span><span class="err">`</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">guess</span> <span class="o">&lt;</span> <span class="n">randomNumber</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="s2">"Too low. Guess again."</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span><span class="s2">"Too high. Guess again."</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>  
+      <span class="n">function</span> <span class="n">goHome</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">href</span> <span class="o">=</span> <span class="s2">"https://q-tipwithaface.github.io/Q-tip/"</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Q-tipwithaface/Q-tip"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Q-tip/student/2023/04/27/P4_Y_Guide_to_SASS.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Q-tip/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://q-tipwithaface.github.io/Q-tip/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Q-tip/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A Web page used by Lucas for High School</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
