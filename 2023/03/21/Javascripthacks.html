@@ -1,8 +1,12 @@
+<p>&lt;!DOCTYPE html&gt;</p>
+<html lang="en">
+<html lang="en">
 <head>
     <style>
-        input[type='Image'] {
+        .food-image {
             position: absolute;
-            transition: transform 1s linear; /* Add CSS transition for smooth sliding animation */
+            height: 150px;
+            width: 150px;
         }
     </style>
 </head>
@@ -10,13 +14,11 @@
 <body>
     <p id="timer"></p>
     <p id="score"></p>
-    <!--  -->
-    <input type="Image" id="test1" src="" height="150" width="150" points="" onclick="scoreboard_sp(1)" />
-    <input type="Image" id="test2" src="" height="150" width="150" points="" onclick="scoreboard_sp(2)" />
-    <input type="Image" id="test3" src="" height="150" width="150" points="" onclick="scoreboard_sp(3)" />
-    <input type="Image" id="test4" src="" height="150" width="150" points="" onclick="scoreboard_sp(4)" />
-    <input type="Image" id="test5" src="" height="150" width="150" points="" onclick="scoreboard_sp(5)" />
-<!--  -->
+    <img class="food-image" id="test1" src="" points="" onclick="scoreboard_sp(1)" />
+    <img class="food-image" id="test2" src="" points="" onclick="scoreboard_sp(2)" />
+    <img class="food-image" id="test3" src="" points="" onclick="scoreboard_sp(3)" />
+    <img class="food-image" id="test4" src="" points="" onclick="scoreboard_sp(4)" />
+    <img class="food-image" id="test5" src="" points="" onclick="scoreboard_sp(5)" />
     <script>
         const foodimages = [
             {
@@ -50,102 +52,87 @@
                 "points": "50"
             }
         ];
-               //
-        function get_images() { 
-            document.getElementById("test1").src = foodimages[0].image;
-            document.getElementById("test2").src = foodimages[1].image;
-            document.getElementById("test3").src = foodimages[2].image;
-            document.getElementById("test4").src = foodimages[3].image;
-            document.getElementById("test5").src = foodimages[4].image;
-                  //
-            document.getElementById("test1").points = parseInt(foodimages[0].points);
-            document.getElementById("test2").points = parseInt(foodimages[1].points);
-            document.getElementById("test3").points = parseInt(foodimages[2].points);
-            document.getElementById("test4").points = parseInt(foodimages[3].points);
-            document.getElementById("test5").points = parseInt(foodimages[4].points);
-        }
-//
-        var score = 0;
-        document.getElementById("score").innerHTML = "Score: " + score + " points";
-//
-        function scoreboard_sp(idid) {
-            if (idid == 1) {
-                points = document.getElementById("test1").points;
-            } else if (idid == 2) {
-                points = document.getElementById("test2").points;
-            } else if (idid == 3) {
-                points = document.getElementById("test3").points;
-            } else if (idid == 4) {
-                points = document.getElementById("test4").points;
-            } else if (idid == 5) {
-                points = document.getElementById("test5").points;
-            } else {
-                points = 0;
+        function get_images() {
+            const foodImageElements = document.getElementsByClassName("food-image");
+            for (let i = 0; i < foodImageElements.length; i++) {
+                const imageElement = foodImageElements[i];
+                const food = foodimages[i];
+                imageElement.src = food.image;
+                imageElement.points = parseInt(food.points);
             }
-            score = score + points;
+        }
+        let score = 0;
+        document.getElementById("score").innerHTML = "Score: " + score + " points";
+        function scoreboard_sp(idid) {
+            const pointsElement = document.getElementById("test" + idid);
+            const points = pointsElement.points || 0;
+            score += points;
             console.log(score);
             document.getElementById("score").innerHTML = "Score: " + score + " points";
         }
-//
-        function moveimage(idid) {
-            var test = document.getElementById(idid);
-            test.style.top = Math.floor((Math.random() * 500) + 1) + "px";
-            test.style.left = "100%"; // Start from the right side of the screen
-            test.style.visibility = 'visible';
-//
+        function moveimage(element) {
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+            const imageWidth = element.offsetWidth;
+            const imageHeight = element.offsetHeight;
+            const maxYPosition = screenHeight - imageHeight;
+            element.style.top = Math.floor(Math.random() * maxYPosition) + "px";
+            element.style.left = screenWidth + "px";
+            element.style.visibility = "visible";
+            const animationDuration = 10; // Adjust the animation duration as needed
             // Animate the image to slide across the screen
-            requestAnimationFrame(function () {
-                test.style.transform = "translateX(-100%)";
-            });
+            element.style.transition = "left " + animationDuration + "s linear";
+            element.style.left = -imageWidth + "px"; // Move the image beyond the left side of the screen
         }
-//
-        function clearimage(idid) {
-            var clear1 = document.getElementById(idid);
-            clear1.style.visibility = 'hidden';
+        function resetImagePosition(element) {
+            const screenWidth = window.innerWidth;
+            const imageWidth = element.offsetWidth;
+            const maxYPosition = window.innerHeight - element.offsetHeight;
+            element.style.top = Math.floor(Math.random() * maxYPosition) + "px";
+            element.style.left = screenWidth + "px";
         }
-//
+        function startImageAnimation() {
+            const foodImageElements = document.getElementsByClassName("food-image");
+            for (let i = 0; i < foodImageElements.length; i++) {
+                const imageElement = foodImageElements[i];
+                moveimage(imageElement);
+            }
+        }
         function clearimages() {
-            clearimage("test1");
-            clearimage("test2");
-            clearimage("test3");
-            clearimage("test4");
-            clearimage("test5");
+            const foodImageElements = document.getElementsByClassName("food-image");
+            for (let i = 0; i < foodImageElements.length; i++) {
+                const imageElement = foodImageElements[i];
+                imageElement.style.visibility = "hidden";
+                resetImagePosition(imageElement);
+            }
         }
-//
-        function stop_moveimage(moveimage_interval) {
-            clearInterval(moveimage_interval);
-            clearimages();
-        }
-//
-        var timer = 30;
+        let timer = 30;
         document.getElementById("timer").innerHTML = "Time left: " + timer + " seconds";
-//
         function onscreen() {
             clearimages();
-            var something = Math.ceil(Math.random() * 5);
-            timer = timer - 1;
+            const something = Math.ceil(Math.random() * 5);
+            timer--;
             document.getElementById("timer").innerHTML = "Time left: " + timer + " seconds";
-//
             if (something >= 1) {
-                moveimage("test1");
+                moveimage(document.getElementById("test1"));
             }
             if (something >= 2) {
-                moveimage("test2");
+                moveimage(document.getElementById("test2"));
             }
             if (something >= 3) {
-                moveimage("test3");
+                moveimage(document.getElementById("test3"));
             }
             if (something >= 4) {
-                moveimage("test4");
+                moveimage(document.getElementById("test4"));
             }
             if (something >= 5) {
-                moveimage("test5");
+                moveimage(document.getElementById("test5"));
             }
         }
-//
         get_images();
-        var thing = setInterval(onscreen, 1000);
-        var image_timeout = setTimeout(stop_moveimage, 30000, thing);
+        startImageAnimation();
+        setInterval(onscreen, 1000);
     </script>
 </body>
-<p>&lt;/html&gt;</p>
+</html>
+</html>
